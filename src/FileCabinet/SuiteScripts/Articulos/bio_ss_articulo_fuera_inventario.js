@@ -4,14 +4,15 @@ window.addEventListener("load", (e) => {
     const URL_IMG_LOADING_NS = "https://6462530.app.netsuite.com/core/media/media.nl?id=";
     const ID_IMG_LOADING_NS = "18490&c=6462530&h=YP9k6isls_cI8JCK-2WVaaAVhNeKfrsFLLzgJAPUsLZzrQR1&fcts=20220506124019&whence=";
 
-    document.getElementsByName("nluser")[0].value = '';
-    document.getElementsByName("nlrole")[0].value = '';
+    document.getElementsByName("nluser")[0].value = '22150';
+    document.getElementsByName("nlrole")[0].value = '1080';
+
 
     if (document.getElementById('subtype').value === 'Sale' || document.getElementById('subtype').value === 'Resale') {
 
         const usuarios_registradores = [
             { area: 'ENSAYOS CLINICOS', usuario: 'JOE LEO PIZARRO PAREDES', correo: 'jpizarro@biomont.com.pe', idusuario: '1746', idrol: '1120', idrevisador: '1739', necesita_revision: true },
-            { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', usuario: 'KARIN KATHERIN MUGA ROJAS', correo: 'kmuga@biomont.com.pe', idusuario: '298', idrol: '1120', correos_adicionales: [''], idrevisador: '301', necesita_revision: true },
+            { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', usuario: 'KARIN KATHERIN MUGA ROJAS', correo: 'kmuga@biomont.com.pe', idusuario: '298', idrol: '1120', idrevisador: '301', necesita_revision: true },
             { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', usuario: 'LIZ MARIANELA GOMEZ BRICEÑO', correo: 'lgomez@biomont.com.pe', idusuario: '300', idrol: '1120', idrevisador: '301', necesita_revision: true },
             { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', usuario: 'LIZET JANET ALFARO VERDE', correo: 'analistascc@biomont.com.pe', idusuario: '1756', idrol: '1120', idrevisador: '301', necesita_revision: true },
             { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', usuario: 'SUSAN LIZET ELIAS DA SILVA', correo: 'selias@biomont.com.pe', idusuario: '303', idrol: '1120', idrevisador: '301', necesita_revision: true },
@@ -22,26 +23,41 @@ window.addEventListener("load", (e) => {
             { area: 'INVESTIGACION Y DESARROLLO', usuario: 'YOZELY SOTO VILCHEZ', correo: 'ysoto@biomont.com.pe', idusuario: '312', idrol: '1120', idrevisador: '1733', necesita_revision: true },
             { area: 'PRODUCCION', usuario: 'MARY VICENTA MIRANDA CACEDA', correo: 'mmiranda@biomont.com.pe', idusuario: '295', idrol: '1120', idrevisador: '283', necesita_revision: true },
             { area: 'COMERCIAL', usuario: 'BLANCA SARITA ELUGO GUEVARA', correo: 'belugo@biomont.com.pe', idusuario: '274', idrol: '1120', idrevisador: '274', necesita_revision: true },
-            { area: 'TI', usuario: 'MAGNO LUCIO REVATTA ÑAÑEZ', correo: 'ti@biomont.com.pe', idusuario: '319', idrol: '1120', idrevisador: '274', necesita_revision: true },
-            { area: 'CONTABILIDAD', usuario: 'PAOLO EPIFANIO VICHARRA FLORIAN', correo: 'pvicharra@Biomont.com.pe', idusuario: '296', idrol: '1120', idrevisador: '274', necesita_revision: true },
+            { area: 'TI', usuario: 'MAGNO LUCIO REVATTA ÑAÑEZ', correo: 'ti@biomont.com.pe', idusuario: '319', idrol: '1120', idrevisador: '319', necesita_revision: true },
+            { area: 'CONTABILIDAD', usuario: 'PAOLO EPIFANIO VICHARRA FLORIAN', correo: 'pvicharra@Biomont.com.pe', idusuario: '296', idrol: '1120', idrevisador: '296', necesita_revision: true },
             { area: 'RRHH', usuario: 'WILMER PINEDO HUAMAN', correo: 'wpinedo@biomont.com.pe', idusuario: '1802', idrol: '1120', idrevisador: '1802', necesita_revision: true },
             { area: 'RRHH', usuario: 'GERIL BERENIZE CASTRO HUAMAN', correo: 'gcastro@biomont.com.pe', idusuario: '1817', idrol: '1120', idrevisador: '1817', necesita_revision: true },
             { area: 'ADMINISTRACION', usuario: 'ALEXANDRA MEYLIN DURAND BALDEON', correo: 'adurand@biomont.com.pe', idusuario: '22194', idrol: '1120', idrevisador: '276', necesita_revision: true },
             { area: 'ALMACEN', usuario: 'CESAR ENRIQUE SUNCION SOSA', correo: 'csuncion@biomont.com.pe', idusuario: '285', idrol: '1120', idrevisador: '285', necesita_revision: true },
-            { area: 'MARKETING', usuario: 'LINCOLN GIAMPIERRE ZAMUDIO CASTILLO', correo: 'lzamudio@biomont.com.pe', idusuario: '24738', idrol: '1120', idrevisador: '24738', necesita_revision: false },
-            { area: 'MARKETING', usuario: 'JEAN FRANCO ALCANTARA RODRIGUEZ', correo: 'jalcantara@biomont.com.pe', idusuario: '27817', idrol: '1120', idrevisador: '27817', necesita_revision: false },
-            { area: 'MARKETING', usuario: 'ROSALIA GARFIAS DE LA CRUZ', correo: 'rgarfias@biomont.com.pe', idusuario: '1796', idrol: '1120', idrevisador: '', necesita_revision: false },
-            { area: 'FINANZAS', usuario: 'ALBINA ROSA YARINGAÑO PIZARRO', correo: 'ayaringano@biomont.com.pe', idusuario: '170', idrol: '1120', idrevisador: '170', necesita_revision: false },
+            { area: 'MARKETING', usuario: 'LINCOLN GIAMPIERRE ZAMUDIO CASTILLO', correo: 'lzamudio@biomont.com.pe', idusuario: '24738', idrol: '1120', idrevisador: '24738', necesita_revision: true },
+            { area: 'MARKETING', usuario: 'JEAN FRANCO ALCANTARA RODRIGUEZ', correo: 'jalcantara@biomont.com.pe', idusuario: '27817', idrol: '1120', idrevisador: '27817', necesita_revision: true },
+            { area: 'MARKETING', usuario: 'ROSALIA GARFIAS DE LA CRUZ', correo: 'rgarfias@biomont.com.pe', idusuario: '1796', idrol: '1120', idrevisador: '1796', necesita_revision: true },
+            { area: 'FINANZAS', usuario: 'ALBINA ROSA YARINGAÑO PIZARRO', correo: 'ayaringano@biomont.com.pe', idusuario: '170', idrol: '1120', idrevisador: '170', necesita_revision: true },
         ];
 
         const usuarios_revisadores = [
-            { usuario: 'IVAN NOLY REYNA WATANABE', correo: 'ireyna@biomont.com.pe', idusuario: '1746', idrol: null, correos_adicionales: ['jpizarro@biomont.com.pe'] },
-            { usuario: 'EDISON RONALD VERA VASQUEZ', correo: 'evera@biomont.com.pe', idusuario: '298', idrol: '1076', correos_adicionales: ['kmuga@biomont.com.pe', 'lgomez@biomont.com.pe', 'analistascc@biomont.com.pe', 'selias@biomont.com.pe', 'dguzman@Biomont.com.pe'] },
-            { usuario: 'MELISSA PIMENTEL MEJIA', correo: 'mpimentel@biomont.com.pe', idusuario: '300', idrol: '1090', correos_adicionales: ['mantenimiento@biomont.com.pe', 'srodriguez@biomont.com.pe', 'mantenimiento.adm@biomont.com.pe'] },
-            { usuario: 'ERIKA LUCIA TACUNAN RIVEROS', correo: 'etacunan@biomont.com.pe', idusuario: '1756', idrol: '1066', correos_adicionales: ['id@biomont.com.pe'] },
-            { usuario: 'CONSTANTINO IVAN POMIANO JESUS', correo: 'cpomiano@biomont.com.pe', idusuario: '303', idrol: '1065', correos_adicionales: ['id@biomont.com.pe', 'mmiranda@biomont.com.pe'] },
-            { usuario: 'CESAR ENRIQUE SUNCION SOSA', correo: 'csuncion@biomont.com.pe', idusuario: '290', idrol: '1069', correos_adicionales: [''] },
-            { usuario: 'DENIS BETTY ALAYO MERGILDO', correo: 'dalayo@biomont.com.pe', idusuario: '276', idrol: '1116', correos_adicionales: ['adurand@Biomont.com.pe'] },
+            { usuario: 'IVAN NOLY REYNA WATANABE', correo: 'ireyna@biomont.com.pe', idusuario: '1739', idrol: '1120', correos_adicionales: ['ireyna@biomont.com.pe','jpizarro@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'EDISON RONALD VERA VASQUEZ', correo: 'evera@biomont.com.pe', idusuario: '301', idrol: '1076', correos_adicionales: ['evera@biomont.com.pe','kmuga@biomont.com.pe', 'lgomez@biomont.com.pe', 'analistascc@biomont.com.pe', 'selias@biomont.com.pe', 'dguzman@Biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'MELISSA PIMENTEL MEJIA', correo: 'mpimentel@biomont.com.pe', idusuario: '300', idrol: '1090', correos_adicionales: ['mantenimiento@biomont.com.pe', 'srodriguez@biomont.com.pe', 'mantenimiento.adm@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'ERIKA LUCIA TACUNAN RIVEROS', correo: 'etacunan@biomont.com.pe', idusuario: '1733', idrol: '1066', correos_adicionales: ['id@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'CONSTANTINO IVAN POMIANO JESUS', correo: 'cpomiano@biomont.com.pe', idusuario: '283', idrol: '1065', correos_adicionales: ['cpomiano@biomont.com.pe', 'mmiranda@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'BLANCA SARITA ELUGO GUEVARA', correo: 'belugo@biomont.com.pe', idusuario: '274', idrol: '1065', correos_adicionales: ['belugo@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'CESAR ENRIQUE SUNCION SOSA', correo: 'csuncion@biomont.com.pe', idusuario: '285', idrol: '1069', correos_adicionales: ['csuncion@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'GERIL BERENIZE CASTRO HUAMAN', correo: 'gcastro@biomont.com.pe', idusuario: '1817', idrol: '1120', correos_adicionales: ['gcastro@biomont.com.pe','wpinedo@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'WILMER PINEDO HUAMAN', correo: 'wpinedo@biomont.com.pe', idusuario: '1802', idrol: '1120', correos_adicionales: ['wpinedo@biomont.com.pe','gcastro@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'PAOLO EPIFANIO VICHARRA FLORIAN', correo: 'pvicharra@Biomont.com.pe', idusuario: '296', idrol: '1120', correos_adicionales: ['pvicharra@Biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'MAGNO LUCIO REVATTA ÑAÑEZ', correo: 'ti@biomont.com.pe', idusuario: '319', idrol: '1120', correos_adicionales: ['ti@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'DENIS BETTY ALAYO MERGILDO', correo: 'dalayo@biomont.com.pe', idusuario: '276', idrol: '1116', correos_adicionales: ['adurand@Biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'LINCOLN GIAMPIERRE ZAMUDIO CASTILLO', correo: 'lzamudio@biomont.com.pe', idusuario: '24738', idrol: '1120', correos_adicionales: ['lzamudio@biomont.com.pe','jalcantara@biomont.com.pe','rgarfias@biomont.com.pe','pliviac@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'JEAN FRANCO ALCANTARA RODRIGUEZ', correo: 'jalcantara@biomont.com.pe', idusuario: '27817', idrol: '1120', correos_adicionales: ['lzamudio@biomont.com.pe','jalcantara@biomont.com.pe','rgarfias@biomont.com.pe','pliviac@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'ROSALIA GARFIAS DE LA CRUZ', correo: 'rgarfias@biomont.com.pe', idusuario: '1796', idrol: '1120', correos_adicionales: ['lzamudio@biomont.com.pe','jalcantara@biomont.com.pe','rgarfias@biomont.com.pe','pliviac@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+            { usuario: 'ALBINA ROSA YARINGAÑO PIZARRO', correo: 'ayaringano@biomont.com.pe', idusuario: '170', idrol: '1120', correos_adicionales: ['ayaringano@biomont.com.pe','avilchez@biomont.com.pe','kcelestino@biomont.com.pe','lbasualdo@biomont.com.pe'] },
+        ];
+
+        const ususarios_aprobadores = [
+            { usuario : 'ANGELO VILCHEZ MARQUEZ', correo: 'avilchez@biomont.com.pe', idusuario: '22150', idrol: '1080' },
+            { usuario : 'KEVIN MARCEL CELESTINO PUCHOC', correo: 'kcelestino@biomont.com.pe', idusuario: '865', idrol: '1043' },
+            { usuario : 'LILIAN ALINA BASUALDO SOTO', correo: 'lbasualdo@biomont.com.pe', idusuario: '26526', idrol: '1114' },
         ];
 
         let obj = {
@@ -69,8 +85,8 @@ window.addEventListener("load", (e) => {
             tipo_unidades: document.getElementById('inpt_unitstype2') || document.getElementById('inpt_unitstype1'),
             tipo_unidades_flecha: document.getElementById('inpt_unitstype2_arrow') || document.getElementById('inpt_unitstype1_arrow'),
             unidad_stock: document.getElementsByName('inpt_saleunit')[0] || document.getElementsByName('inpt_purchaseunit')[0],
-            venta: document.getElementById('inpt_saleunit3') || document.getElementById('inpt_saleunit2'),
-            venta_flecha: document.getElementById('inpt_saleunit3_arrow') || document.getElementById('inpt_saleunit2_arrow'),
+            unidad_venta: document.getElementById('inpt_saleunit3') || document.getElementById('inpt_saleunit2'),
+            unidad_venta_flecha: document.getElementById('inpt_saleunit3_arrow') || document.getElementById('inpt_saleunit2_arrow'),
             consumo: document.getElementById('inpt_consumptionunit4') || document.getElementById('inpt_consumptionunit3') || document.getElementById('inpt_consumptionunit5'),
             consumo_flecha: document.getElementById('inpt_consumptionunit4_arrow') || document.getElementById('inpt_consumptionunit3_arrow') || document.getElementById('inpt_consumptionunit5_arrow'),
             popup_lista_lineas: document.getElementById('custitem3_popup_list'),
@@ -81,6 +97,8 @@ window.addEventListener("load", (e) => {
                 obj.input_codigo_articulo.setAttribute('style', 'pointer-events: none;');
                 obj.tipo_unidades.setAttribute('style', 'pointer-events: none;');
                 obj.tipo_unidades_flecha.setAttribute('style', 'display: none;');
+                obj.unidad_venta.setAttribute('style', 'pointer-events: none;');
+                obj.unidad_venta_flecha.setAttribute('style', 'display: none;');
                 obj.consumo.setAttribute('style', 'pointer-events: none;');
                 obj.consumo_flecha.setAttribute('style', 'display: none;');
             },
@@ -151,69 +169,28 @@ window.addEventListener("load", (e) => {
 
                 data_base.find(elemento => {
                     if (elemento.linea === linea) {
-                        obj.campos_autocompletar.subsidiaria.value = data_base.subsidiaria;
+                        obj.campos_autocompletar.subsidiaria.value = elemento.subsidiaria;
                         obj.campos_autocompletar.subsidiaria_principal.classList.remove('dropdownSelected');
                         obj.campos_autocompletar.subsidiaria_principal.classList.add('dropdownNotSelected');
                         obj.campos_autocompletar.subsidiaria_biomont.classList.remove('dropdownNotSelected');
                         obj.campos_autocompletar.subsidiaria_biomont.classList.add('dropdownSelected');
-                        obj.campos_autocompletar.inactivo.checked = data_base.inactivo;
-                        obj.campos_autocompletar.consumo.checked = data_base.consumo;
-                        obj.campos_autocompletar.categoria_costo.value = data_base.categoria_costo;
-                        obj.campos_autocompletar.categoria_costo_hddn.value = data_base.categoria_costo_hddn;
-                        obj.campos_autocompletar.categoria_costo_indx.value = data_base.categoria_costo_indx;
+                        obj.campos_autocompletar.inactivo.checked = elemento.inactivo;
+                        obj.campos_autocompletar.consumo.checked = elemento.consumo;
+                        obj.campos_autocompletar.categoria_costo.value = elemento.categoria_costo;
+                        obj.campos_autocompletar.categoria_costo_hddn.value = elemento.categoria_costo_hddn;
+                        obj.campos_autocompletar.categoria_costo_indx.value = elemento.categoria_costo_indx;
                         obj.campos_autocompletar.unidad_medida.value = _unidad_medida;
                         obj.campos_autocompletar.unidad_medida_hddn.value = _unidad_medida_hddn;
                         obj.campos_autocompletar.cod_unidad_medida.value = _cod_unidad_medida;
-                        obj.campos_autocompletar.programa_fiscal.value = data_base.programa_fiscal;
-                        obj.campos_autocompletar.programa_fiscal_hddn.value = data_base.programa_fiscal_hddn;
-                        obj.campos_autocompletar.programa_fiscal_indx.value = data_base.programa_fiscal_indx;
+                        obj.campos_autocompletar.programa_fiscal.value = elemento.programa_fiscal;
+                        obj.campos_autocompletar.programa_fiscal_hddn.value = elemento.programa_fiscal_hddn;
+                        obj.campos_autocompletar.programa_fiscal_indx.value = elemento.programa_fiscal_indx;
                         if (linea === 'ACTIVO FIJO') {
-                            obj.campos_autocompletar.cuenta_ingresos.value = data_base.cuenta_ingresos; //adicional
-                            obj.campos_autocompletar.cuenta_ingresos_hddn.value = data_base.cuenta_ingresos_hddn; //adicional
+                            obj.campos_autocompletar.cuenta_ingresos.value = elemento.cuenta_ingresos; //adicional
+                            obj.campos_autocompletar.cuenta_ingresos_hddn.value = elemento.cuenta_ingresos_hddn; //adicional
                         }
                     }
                 })
-
-                /*switch(linea){
-                    case 'VARIOS':
-                        obj.campos_autocompletar.subsidiaria.value=data_base.subsidiaria;
-                        obj.campos_autocompletar.subsidiaria_principal.classList.remove('dropdownSelected');
-                        obj.campos_autocompletar.subsidiaria_principal.classList.add('dropdownNotSelected');
-                        obj.campos_autocompletar.subsidiaria_biomont.classList.remove('dropdownNotSelected');
-                        obj.campos_autocompletar.subsidiaria_biomont.classList.add('dropdownSelected');
-                        obj.campos_autocompletar.inactivo.checked=data_base.inactivo;
-                        obj.campos_autocompletar.consumo.checked=data_base.consumo;
-                        obj.campos_autocompletar.categoria_costo.value=data_base.categoria_costo;
-                        obj.campos_autocompletar.categoria_costo_hddn.value=data_base.categoria_costo_hddn;
-                        obj.campos_autocompletar.categoria_costo_indx.value=data_base.categoria_costo_indx;
-                        obj.campos_autocompletar.unidad_medida.value=_unidad_medida;
-                        obj.campos_autocompletar.unidad_medida_hddn.value=_unidad_medida_hddn;
-                        obj.campos_autocompletar.cod_unidad_medida.value=_cod_unidad_medida;
-                        obj.campos_autocompletar.programa_fiscal.value=data_base.programa_fiscal;
-                        obj.campos_autocompletar.programa_fiscal_hddn.value=data_base.programa_fiscal_hddn;
-                        obj.campos_autocompletar.programa_fiscal_indx.value=data_base.programa_fiscal_indx;
-                    break;
-                    case 'ACTIVO FIJO':
-                        obj.campos_autocompletar.subsidiaria.value=data_base.ACTIVO_FIJO.subsidiaria;
-                        obj.campos_autocompletar.subsidiaria_principal.classList.remove('dropdownSelected');
-                        obj.campos_autocompletar.subsidiaria_principal.classList.add('dropdownNotSelected');
-                        obj.campos_autocompletar.subsidiaria_biomont.classList.remove('dropdownNotSelected');
-                        obj.campos_autocompletar.subsidiaria_biomont.classList.add('dropdownSelected');
-                        obj.campos_autocompletar.inactivo.checked=data_base.ACTIVO_FIJO.inactivo;
-                        obj.campos_autocompletar.consumo.checked=data_base.ACTIVO_FIJO.consumo;
-                        obj.campos_autocompletar.categoria_costo.value=data_base.ACTIVO_FIJO.categoria_costo;
-                        obj.campos_autocompletar.categoria_costo_hddn.value=data_base.ACTIVO_FIJO.categoria_costo_hddn;
-                        obj.campos_autocompletar.categoria_costo_indx.value=data_base.ACTIVO_FIJO.categoria_costo_indx;
-                        obj.campos_autocompletar.unidad_medida.value=_unidad_medida;
-                        obj.campos_autocompletar.unidad_medida_hddn.value=_unidad_medida_hddn;
-                        obj.campos_autocompletar.cod_unidad_medida.value=_cod_unidad_medida;
-                        obj.campos_autocompletar.cuenta_ingresos.value=data_base.ACTIVO_FIJO.cuenta_ingresos; //adicional
-                        obj.campos_autocompletar.cuenta_ingresos_hddn.value=data_base.ACTIVO_FIJO.cuenta_ingresos_hddn; //adicional
-                        obj.campos_autocompletar.programa_fiscal.value=data_base.ACTIVO_FIJO.programa_fiscal;
-                        obj.campos_autocompletar.programa_fiscal_hddn.value=data_base.ACTIVO_FIJO.programa_fiscal_hddn;
-                        obj.campos_autocompletar.programa_fiscal_indx.value=data_base.ACTIVO_FIJO.programa_fiscal_indx;
-                    break;
-                }*/
 
                 switch (obj.subtipo.value) {
                     case 'Sale': //Venta
@@ -295,8 +272,10 @@ window.addEventListener("load", (e) => {
                                         })
                                             .then((response) => response.json())
                                             .then((data) => {
+
                                                 document.getElementById('id-blocker').style.display = 'none';
                                                 document.getElementById('id-popup').style.display = 'none';
+
                                                 data_base.forEach(elemento => {
                                                     if (dato.linea === elemento.linea) {
                                                         obj.input_codigo_articulo.value = obj.getNumeroCorrelativo(data.num, data.nomen);
@@ -304,15 +283,7 @@ window.addEventListener("load", (e) => {
                                                         obj.input_descripcion_articulo.focus();
                                                     }
                                                 })
-                                                /*document.getElementById('id-blocker').style.display='none';
-                                                document.getElementById('id-popup').style.display='none';
-                                                arrayLineas.forEach(linea=>{
-                                                    if(dato.linea === linea){
-                                                        obj.input_codigo_articulo.value = obj.getNumeroCorrelativo(data.num,data.nomen);
-                                                        obj.llenar_campos(dato.linea,dato.unidad);
-                                                        obj.input_descripcion_articulo.focus();
-                                                    }
-                                                });*/
+
                                             })
                                             .catch(error => console.error(error));
                                     });
@@ -379,7 +350,7 @@ window.addEventListener("load", (e) => {
 
                 document.getElementsByTagName("body")[0].insertAdjacentElement("afterend", popup);
             },
-            enviar_correo: (nombre_ejecutor, email_ejecutor) => {
+            enviar_correo: (nombre_ejecutor, email_notificacion, concepto, accion) => {
                 obj.main_form.addEventListener("submit", (e) => {
                     e.preventDefault();
 
@@ -402,9 +373,12 @@ window.addEventListener("load", (e) => {
                             id_formulario: obj.id_formulario.value,
                             codigo_articulo: obj.input_codigo_articulo.value,
                             descripcion_articulo: obj.input_descripcion_articulo.value,
-                            nombre_ejecutor: nombre_ejecutor  /*obj.input_nombre_aprobador.value, */,
-                            email_ejecutor: email_ejecutor /*document.querySelector('#email_fs a').innerHTML,*/,
-                            linea_articulo: obj.input_linea_articulo.value
+                            nombre_ejecutor: nombre_ejecutor.value,
+                            email_notificacion: ['jpena@biomont.com.pe','fcastro@biomont.com.pe'],
+                            email_notificacion_aux: email_notificacion,
+                            linea_articulo: obj.input_linea_articulo.value,
+                            concepto: concepto,
+                            accion: accion
                         }
 
                         fetch(BASE_URL + "/correlativoarticulo/sendEmailNotification", {
@@ -414,30 +388,28 @@ window.addEventListener("load", (e) => {
                             },
                             body: JSON.stringify({ "dato": dato })
                         })
-                            .then((response) => response.json())
-                            .then((data) => {
+                        .then((response) => response.json())
+                        .then((data) => {
+                            
+                            if (data.est == 0) {
 
-                                if (data.est == 0) {
-                                    obj.var_campos.inactivo_inp.removeAttribute("checked");
-                                    switch (obj.subtipo.value) {
-                                        case 'Sale': //Venta
-                                            document.getElementsByName('salesdescription')[0].value = document.getElementsByName('salesdescription')[0].value + ' ';
-                                            break;
-                                        case 'Resale': // Reventa
-                                            document.getElementsByName('salesdescription')[0].value = document.getElementsByName('salesdescription')[0].value + ' ';
-                                            break;
-                                    }
-
-                                    alert("El correo se envió correctamente");
-                                    obj.main_form.submit();
-                                    return true;
-
-                                } else {
-                                    alert("Hubo un error en el envío de correo");
-                                    return false;
+                                if(accion !== 'Revisado'){
+                                    obj.campos_autocompletar.inactivo.checked = false;
                                 }
-                            })
-                            .catch(error => console.error(error));
+
+                                alert("El correo se envió correctamente");
+                                obj.main_form.submit();
+                                return true;
+
+                            }else{
+
+                                alert("Hubo un error en el envío de correo");
+                                return false;
+
+                            }
+
+                        })
+                        .catch(error => console.error(error));
 
                     }, 3000);
 
@@ -561,6 +533,7 @@ window.addEventListener("load", (e) => {
                         })
                             .then((response) => response.json())
                             .then((data) => {
+
                                 if (data.res) {
 
                                     alert("Correlativo actualizado correctamente");
@@ -573,6 +546,7 @@ window.addEventListener("load", (e) => {
                                     return false;
 
                                 }
+
                             })
                             .catch(error => console.error(error));
 
@@ -580,16 +554,25 @@ window.addEventListener("load", (e) => {
 
                 });
             },
-            setBotonFirma: (input_nombre_ejecutor, nombre_boton) => {
+            setBotonFirma: (input_nombre_ejecutor, nombre_boton, correos_notificacion, concepto, accion) => {
                 const boton = document.createElement('button');
                 boton.id = 'id-boton-' + nombre_boton;
                 boton.innerHTML = 'Firmar';
                 boton.onclick = () => {
-                    obj.enviar_correo();
+                    obj.enviar_correo(input_nombre_ejecutor,correos_notificacion, concepto, accion);
                 };
                 const salto_linea = document.createElement('br');
                 input_nombre_ejecutor.insertAdjacentElement('afterend', salto_linea);
                 salto_linea.insertAdjacentElement('afterend', boton);
+            },
+            setInputAux: (input_nombre_ejecutor,nombre_input, valor_input=false) => {
+                if(valor_input){
+                    const input = document.createElement('input');
+                    input.id = 'id-input-' + nombre_input;
+                    //input.type = 'hidden';
+                    input.value = valor_input;
+                    input_nombre_ejecutor.insertAdjacentElement('afterend', input);
+                }
             },
             msj_error: {
                 tb_td_ref_con_top: document.getElementsByTagName('tr')[0],
@@ -710,25 +693,90 @@ window.addEventListener("load", (e) => {
 
             console.log("Editar");
             console.log(obj.idrol.value);
+            console.log(obj.iduser.value);
+
+            let usuario_session = '';
 
             switch (obj.idrol.value) {
                 case '1120': //BIO_ROL_CREACION_ARTICULO
-                    console.log('BIO_ROL_CREACION_ARTICULO');
-                    break;
                 case '1076': //BIO_ROL_CALIDAD
-                    console.log('BIO_ROL_CALIDAD');
-                    break;
                 case '1090': //BIO_ROL_OPERACIONES_PLANTA_ASISTENTE
-                    console.log('BIO_ROL_OPERACIONES_PLANTA_ASISTENTE');
-                    break;
                 case '1066': //BIO_ROL_ID
-                    console.log('BIO_ROL_ID');
-                    break;
                 case '1065': //BIO_ROL_PRODUCCION
-                    console.log('BIO_ROL_PRODUCCION');
-                    break;
                 case '1069': //BIO_ROL_ALMACEN
-                    console.log('BIO_ROL_ALMACEN');
+
+                    switch(obj.iduser.value){ 
+                        case '1739':    //IVAN REYNA
+                        case '301':     //EDISON VERA
+                        case '300':     //MELISSA PIMENTEL
+                        case '1733':    //ERIKA TACUNAN
+                        case '283':     //CONSTANTINO POMIANO
+                        case '274':     //BLANCA ELUGO
+                        case '285':     //CESAR SUNCION
+                        case '1817':    //GERIL CASTRO
+                        case '1802':    //WILMER PINEDO
+                        case '296':     //PAOLO VICHARRA
+                        case '319':     //MAGNO REVATTA
+                        case '276':     //DENIS ALAYO
+                        case '24738':   //LINCOLN ZAMUDIO
+                        case '27817':   //JEAN ALCANTARA
+                        case '1796':    //ROSALIA GARFIAS
+                        case '170':     //ALBINA YARINGAÑO
+                            usuario_session = usuarios_revisadores.find(usurev => usurev.idusuario == obj.iduser.value);
+
+                            if(obj.input_nombre_revisador.value === ''){
+
+                                obj.input_nombre_revisador.value = usuario_session.usuario;
+
+                                let reportar_revisador = usuarios_revisadores.find(usurev => usurev.usuario ==  obj.input_nombre_revisador.value);
+
+                                obj.setInputAux(obj.input_nombre_revisador,'revision',reportar_revisador.idusuario);
+
+                                if(document.getElementById('id-input-revision').value === reportar_revisador.idusuario && obj.input_nombre_aprobador.value === ''){
+                                    obj.input_estado_aprobacion.value = 'PENDIENTE';
+                                    obj.setBotonFirma(obj.input_nombre_revisador, 'revisar', reportar_revisador.correos_adicionales, 'Revisión', 'Revisado');
+                                }
+                            }
+                            break;
+                    }
+                    break;
+
+                case '1080': //BIO_ROL_LOGISTICA_PLANEAMIENTO
+                case '1043': //BIO_ROL_LOGISTICA_COMPRADOR
+                case '1114': //BIO_ROL_LOGISTICA_SUPERVISOR
+
+                    switch(obj.iduser.value){
+                        case '22150':   //ANGELO VILCHEZ   
+                        case '26526':   //LILIAN BASUALDO   
+                        case '865':     //KEVIN CELESTINO  
+                            usuario_session = ususarios_aprobadores.find(usuaprob => usuaprob.idusuario == obj.iduser.value);
+
+                            if(obj.input_nombre_aprobador.value === ''){
+
+                                if(obj.input_nombre_revisador.value !== ''){
+                                    obj.input_nombre_aprobador.value = usuario_session.usuario;
+                                }
+
+                                let reportar_aprobador = ususarios_aprobadores.find(usuaprob => usuaprob.usuario ==  obj.input_nombre_aprobador.value) || '';
+
+                                obj.setInputAux(obj.input_nombre_aprobador,'aprobacion',reportar_aprobador.idusuario);
+
+                                if(document.getElementById('id-input-aprobacion')){
+                                    if(document.getElementById('id-input-aprobacion').value === reportar_aprobador.idusuario && obj.input_nombre_revisador.value !== ''){
+                                        obj.input_estado_aprobacion.value = 'APROBADO';
+                                        let notificacion_final = usuarios_revisadores.find(usurev => usurev.usuario ==  obj.input_nombre_revisador.value);
+                                        obj.setBotonFirma(obj.input_nombre_aprobador, 'aprobar', notificacion_final.correos_adicionales, 'Aprobación', 'Aprobado');
+                                    }
+                                }
+                                
+                            }
+                            break;
+                    }
+
+                    break;
+
+                case '3': //BIO_ROL_ALMACEN
+                    console.log('ADMINISTRADOR');
                     break;
             }
 
@@ -736,180 +784,6 @@ window.addEventListener("load", (e) => {
             obj.input_nombre_revisador.setAttribute('style', 'pointer-events: none;');
             obj.input_nombre_aprobador.setAttribute('style', 'pointer-events: none;');
 
-
-            if (obj.input_estado_aprobacion.value === 'PENDIENTE' && obj.input_nombre_revisador.value === '' && obj.input_nombre_aprobador.value === '') {
-
-                obj.setBotonFirma(obj.input_nombre_revisador, 'revisar');
-
-            } else if (obj.input_estado_aprobacion.value === 'PENDIENTE' && obj.input_nombre_revisador.value !== '' && obj.input_nombre_aprobador.value === '') {
-
-                obj.setBotonFirma(obj.input_nombre_aprobador, 'aprobar');
-
-            }
-
-            /*switch(obj.subtipo.value){
-                case 'Sale': //Venta
-                if(document.getElementsByName('salesdescription')[0].value.lastIndexOf(' ')!==document.getElementsByName('salesdescription')[0].value.length-1){
-                    obj.setBotonFirmaAprobado();
-                }
-                break;
-                case 'Resale': // Reventa
-                if(document.getElementsByName('salesdescription')[0].value.lastIndexOf(' ')!==document.getElementsByName('salesdescription')[0].value.length-1){
-                obj.setBotonFirmaAprobado();
-                }
-                break;
-            }*/
-
-
-            /*switch(obj.subtipo.value){
-            case 'Sale': //Venta
-                if(document.getElementsByName('salesdescription')[0].value!==''){
-                const aprobador_sesion = document.querySelector('div#uif38 span');
-                
-                const aprobador = document.getElementsByName('inpt_custitem24')[0];
-                const aprobador_hddn = document.getElementById('hddn_custitem248') || document.getElementById('hddn_custitem247') || document.getElementById('hddn_custitem246') || document.getElementById('hddn_custitem245');
-                const aprobador_indx = document.getElementById('indx_custitem248') || document.getElementById('indx_custitem247') || document.getElementById('indx_custitem246') || document.getElementById('indx_custitem245');
-                const aprobador_flecha = document.getElementById('inpt_custitem246_arrow') || document.getElementById('inpt_custitem245_arrow') || document.getElementById('inpt_custitem247_arrow');
-                const aprobador_popup = document.querySelector('#custitem24_fs span.uir-field-widget');
-                
-                const accion_aprobar = document.getElementsByName('inpt_custitem25')[0];
-                accion_aprobar.value = 'APROBADO';
-                const accion_aprobar_hddn = document.getElementById('hddn_custitem257') || document.getElementById('hddn_custitem256') || document.getElementById('hddn_custitem255') || document.getElementById('hddn_custitem254');
-                accion_aprobar_hddn.value = '2';
-                const accion_aprobar_indx = document.getElementById('indx_custitem257') || document.getElementById('indx_custitem256') || document.getElementById('indx_custitem255') || document.getElementById('indx_custitem254');
-                accion_aprobar_indx.value = '2';
-                const accion_aprobar_flecha = document.getElementById('inpt_custitem255_arrow') || document.getElementById('inpt_custitem256_arrow') || document.getElementById('inpt_custitem254_arrow');
-                const accion_aprobar_popup = document.querySelector('#custitem25_fs span.uir-field-widget');
-
-                const codigo_articulo = document.getElementsByName('itemid')[0];
-                
-                switch(aprobador_sesion.innerText){
-                    case 'JUAN ROBERTO PEÑA MALASQUEZ':
-                    aprobador.value = 'ANGELO VILCHEZ MARQUEZ';
-                    aprobador.setAttribute('style','pointer-events: none;');
-                    aprobador_flecha.setAttribute('style','display: none;');
-                    aprobador_popup.setAttribute('style','display: none;');
-                    aprobador_hddn.value = '1';
-                    aprobador_indx.value = '2';
-                    accion_aprobar.setAttribute('style','pointer-events: none;');
-                    accion_aprobar_flecha.setAttribute('style','display: none;');
-                    accion_aprobar_popup.setAttribute('style','display: none;');
-                    //codigo_articulo.setAttribute('style','pointer-events: none;');
-                    break;
-                    case 'ANGELO VILCHEZ MARQUEZ':
-                    aprobador.value = 'ANGELO VILCHEZ MARQUEZ';
-                    aprobador.setAttribute('style','pointer-events: none;');
-                    aprobador_flecha.setAttribute('style','display: none;');
-                    aprobador_popup.setAttribute('style','display: none;');
-                    aprobador_hddn.value = '1';
-                    aprobador_indx.value = '2';
-                    accion_aprobar.setAttribute('style','pointer-events: none;');
-                    accion_aprobar_flecha.setAttribute('style','display: none;');
-                    accion_aprobar_popup.setAttribute('style','display: none;');
-                    //codigo_articulo.setAttribute('style','pointer-events: none;');
-                    break;
-                    case 'KEVIN MARCEL CELESTINO PUCHOC':
-                    aprobador.value = 'KEVIN MARCEL CELESTINO PUCHOC';
-                    aprobador.setAttribute('style','pointer-events: none;');
-                    aprobador_flecha.setAttribute('style','display: none;');
-                    aprobador_popup.setAttribute('style','display: none;');
-                    aprobador_hddn.value = '2';
-                    aprobador_indx.value = '4';
-                    accion_aprobar.setAttribute('style','pointer-events: none;');
-                    accion_aprobar_flecha.setAttribute('style','display: none;');
-                    accion_aprobar_popup.setAttribute('style','display: none;');
-                    //codigo_articulo.setAttribute('style','pointer-events: none;');
-                    break;
-                    case 'LILIAN ALINA BASUALDO SOTO':
-                    aprobador.value = 'LILIAN ALINA BASUALDO SOTO';
-                    aprobador.setAttribute('style','pointer-events: none;');
-                    aprobador_flecha.setAttribute('style','display: none;');
-                    aprobador_popup.setAttribute('style','display: none;');
-                    aprobador_hddn.value = '4';
-                    aprobador_indx.value = '5';
-                    accion_aprobar.setAttribute('style','pointer-events: none;');
-                    accion_aprobar_flecha.setAttribute('style','display: none;');
-                    accion_aprobar_popup.setAttribute('style','display: none;');
-                    //codigo_articulo.setAttribute('style','pointer-events: none;');
-                    break;
-                }
-                }
-                break;
-            case 'Resale': // Reventa
-                if(document.getElementsByName('salesdescription')[0].value!==''){
-
-                const aprobador_sesion = document.querySelector('div#uif38 span');
-                
-                const aprobador = document.getElementsByName('inpt_custitem24')[0];
-                const aprobador_hddn = document.getElementById('hddn_custitem248') || document.getElementById('hddn_custitem247') || document.getElementById('hddn_custitem246') || document.getElementById('hddn_custitem245');
-                const aprobador_indx = document.getElementById('indx_custitem248') || document.getElementById('indx_custitem247') || document.getElementById('indx_custitem246') || document.getElementById('indx_custitem245');
-                const aprobador_flecha = document.getElementById('inpt_custitem247_arrow') || document.getElementById('inpt_custitem246_arrow') || document.getElementById('inpt_custitem245_arrow');
-                const aprobador_popup = document.querySelector('#custitem24_fs span.uir-field-widget');
-                
-                const accion_aprobar = document.getElementsByName('inpt_custitem25')[0];
-                accion_aprobar.value = 'APROBADO';
-                const accion_aprobar_hddn = document.getElementById('hddn_custitem257') || document.getElementById('hddn_custitem256') || document.getElementById('hddn_custitem255');
-                accion_aprobar_hddn.value = '2';
-                const accion_aprobar_indx = document.getElementById('indx_custitem257') || document.getElementById('indx_custitem256') || document.getElementById('indx_custitem255');
-                accion_aprobar_indx.value = '2';
-                const accion_aprobar_flecha = document.getElementById('inpt_custitem256_arrow') || document.getElementById('inpt_custitem255_arrow') || document.getElementById('inpt_custitem254_arrow');
-                const accion_aprobar_popup = document.querySelector('#custitem25_fs span.uir-field-widget');
-
-                const codigo_articulo = document.getElementsByName('itemid')[0];
-                
-                switch(aprobador_sesion.innerText){
-                    case 'JUAN ROBERTO PEÑA MALASQUEZ':
-                    aprobador.value = 'ANGELO VILCHEZ MARQUEZ';
-                    aprobador.setAttribute('style','pointer-events: none;');
-                    aprobador_flecha.setAttribute('style','display: none;');
-                    aprobador_popup.setAttribute('style','display: none;');
-                    aprobador_hddn.value = '1';
-                    aprobador_indx.value = '2';
-                    accion_aprobar.setAttribute('style','pointer-events: none;');
-                    accion_aprobar_flecha.setAttribute('style','display: none;');
-                    accion_aprobar_popup.setAttribute('style','display: none;');
-                    //codigo_articulo.setAttribute('style','pointer-events: none;');
-                    break;
-                    case 'ANGELO VILCHEZ MARQUEZ':
-                    aprobador.value = 'ANGELO VILCHEZ MARQUEZ';
-                    aprobador.setAttribute('style','pointer-events: none;');
-                    aprobador_flecha.setAttribute('style','display: none;');
-                    aprobador_popup.setAttribute('style','display: none;');
-                    aprobador_hddn.value = '1';
-                    aprobador_indx.value = '2';
-                    accion_aprobar.setAttribute('style','pointer-events: none;');
-                    accion_aprobar_flecha.setAttribute('style','display: none;');
-                    accion_aprobar_popup.setAttribute('style','display: none;');
-                    //codigo_articulo.setAttribute('style','pointer-events: none;');
-                    break;
-                    case 'KEVIN MARCEL CELESTINO PUCHOC':
-                    aprobador.value = 'KEVIN MARCEL CELESTINO PUCHOC';
-                    aprobador.setAttribute('style','pointer-events: none;');
-                    aprobador_flecha.setAttribute('style','display: none;');
-                    aprobador_popup.setAttribute('style','display: none;');
-                    aprobador_hddn.value = '2';
-                    aprobador_indx.value = '4';
-                    accion_aprobar.setAttribute('style','pointer-events: none;');
-                    accion_aprobar_flecha.setAttribute('style','display: none;');
-                    accion_aprobar_popup.setAttribute('style','display: none;');
-                    //codigo_articulo.setAttribute('style','pointer-events: none;');
-                    break;
-                    case 'LILIAN ALINA BASUALDO SOTO':
-                    aprobador.value = 'LILIAN ALINA BASUALDO SOTO';
-                    aprobador.setAttribute('style','pointer-events: none;');
-                    aprobador_flecha.setAttribute('style','display: none;');
-                    aprobador_popup.setAttribute('style','display: none;');
-                    aprobador_hddn.value = '4';
-                    aprobador_indx.value = '5';
-                    accion_aprobar.setAttribute('style','pointer-events: none;');
-                    accion_aprobar_flecha.setAttribute('style','display: none;');
-                    accion_aprobar_popup.setAttribute('style','display: none;');
-                    //codigo_articulo.setAttribute('style','pointer-events: none;');
-                    break;
-                }
-                }
-                break;
-            }*/
         }
 
     }

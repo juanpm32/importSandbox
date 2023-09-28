@@ -39,5 +39,3 @@ const data_base = [
 		programa_fiscal_indx: "3",
 	},
 ];
-
-const arrayLineas = ["VARIOS","ACTIVO FIJO"];
