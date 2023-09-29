@@ -19,7 +19,7 @@ const data_base = [
 		programa_fiscal_indx: "3",
 	},
 	{
-		linea: "ACTIVO_FIJO",
+		linea: "ACTIVO FIJO",
 		subsidiaria: "2",
 		inactivo: true,
 		categoria_costo: "No Definido",
@@ -37,5 +37,5 @@ const data_base = [
 		programa_fiscal: "IGV",
 		programa_fiscal_hddn: "3",
 		programa_fiscal_indx: "3",
-	},
+	}
 ];
