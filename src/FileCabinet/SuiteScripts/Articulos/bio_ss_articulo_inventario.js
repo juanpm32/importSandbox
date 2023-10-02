@@ -4,7 +4,7 @@ window.addEventListener("load", (e) => {
 	const URL_IMG_LOADING_NS = "https://6462530.app.netsuite.com/core/media/media.nl?id=";
 	const ID_IMG_LOADING_NS = "18490&c=6462530&h=YP9k6isls_cI8JCK-2WVaaAVhNeKfrsFLLzgJAPUsLZzrQR1&fcts=20220506124019&whence=";
 
-	//document.getElementsByName("nluser")[0].value = '22150';
+	//document.getElementsByName("nluser")[0].value = '865';
 	//document.getElementsByName("nlrole")[0].value = '1080';
 
 	const usuarios_registradores = [
@@ -58,12 +58,12 @@ window.addEventListener("load", (e) => {
 	];
 
 	/**
-		 * ----creadores SR------
-		 * JOE LEO PIZARRO PAREDES
-		 * SERGIO RODRIGUEZ POLAR
-		 * WILMER PINEDO HUAMAN
-		 * GERIL BERENIZE CASTRO HUAMAN
-		 */
+	* ----creadores SR------
+	* JOE LEO PIZARRO PAREDES
+	* SERGIO RODRIGUEZ POLAR
+	* WILMER PINEDO HUAMAN
+	* GERIL BERENIZE CASTRO HUAMAN
+	*/
 
 	/**
 	 * ---revisadores SR-----
@@ -121,8 +121,8 @@ window.addEventListener("load", (e) => {
 		},
 		campos_autocompletar: {
 			subsidiaria: document.getElementsByName("subsidiary")[0],
-			subsidiaria_principal: document.getElementById("row_subsidiary4_0") || document.getElementById("row_subsidiary5_0") || document.getElementById("row_subsidiary6_0") || document.getElementById("row_subsidiary7_0") || document.getElementById("row_subsidiary8_0") || document.getElementById("row_subsidiary9_0"),
-			subsidiaria_biomont: document.getElementById("row_subsidiary4_1") || document.getElementById("row_subsidiary5_1") || document.getElementById("row_subsidiary6_1") || document.getElementById("row_subsidiary7_1") || document.getElementById("row_subsidiary8_1") || document.getElementById("row_subsidiary9_1"),
+			subsidiaria_principal: document.getElementById("row_subsidiary4_0") || document.getElementById("row_subsidiary5_0") || document.getElementById("row_subsidiary6_0") || document.getElementById("row_subsidiary7_0") || document.getElementById("row_subsidiary8_0") || document.getElementById("row_subsidiary9_0") || document.getElementById("row_subsidiary10_0"),
+			subsidiaria_biomont: document.getElementById("row_subsidiary4_1") || document.getElementById("row_subsidiary5_1") || document.getElementById("row_subsidiary6_1") || document.getElementById("row_subsidiary7_1") || document.getElementById("row_subsidiary8_1") || document.getElementById("row_subsidiary9_1") || document.getElementById("row_subsidiary10_1"),
 			inactivo: document.getElementById("isinactive_fs_inp"),
 			metodo_calculo_costo: document.getElementsByName("inpt_costingmethod")[0],
 			metodo_calculo_costo_hddn: document.getElementById("hddn_costingmethod6") || document.getElementById("hddn_costingmethod7") || document.getElementById("hddn_costingmethod8") || document.getElementById("hddn_costingmethod9") || document.getElementById("hddn_costingmethod10") || document.getElementById("hddn_costingmethod11"),
@@ -142,11 +142,11 @@ window.addEventListener("load", (e) => {
 			tipo_existencia: document.getElementById("custitem_ns_pe_existen_type_display"),
 			tipo_existencia_hddn: document.getElementById("hddn_custitem_ns_pe_existen_type_fs"),
 			catalogo_existencia: document.getElementsByName("inpt_custitem_ns_pe_inv_cataog")[0],
-			catalogo_existencia_hddn: document.getElementById("hddn_custitem_ns_pe_inv_cataog29") || document.getElementById("hddn_custitem_ns_pe_inv_cataog30") || document.getElementById("hddn_custitem_ns_pe_inv_cataog31") || document.getElementById("hddn_custitem_ns_pe_inv_cataog32") || document.getElementById("hddn_custitem_ns_pe_inv_cataog33") || document.getElementById("hddn_custitem_ns_pe_inv_cataog34") || document.getElementById("hddn_custitem_ns_pe_inv_cataog35") || document.getElementById("hddn_custitem_ns_pe_inv_cataog36") || document.getElementById("hddn_custitem_ns_pe_inv_cataog37") || document.getElementById("hddn_custitem_ns_pe_inv_cataog38") || document.getElementById("hddn_custitem_ns_pe_inv_cataog39") || document.getElementById("hddn_custitem_ns_pe_inv_cataog40") || document.getElementById("hddn_custitem_ns_pe_inv_cataog41"),
-			catalogo_existencia_indx: document.getElementById("indx_custitem_ns_pe_inv_cataog29") || document.getElementById("indx_custitem_ns_pe_inv_cataog30") || document.getElementById("indx_custitem_ns_pe_inv_cataog31") || document.getElementById("indx_custitem_ns_pe_inv_cataog32") || document.getElementById("indx_custitem_ns_pe_inv_cataog33") || document.getElementById("indx_custitem_ns_pe_inv_cataog34") || document.getElementById("indx_custitem_ns_pe_inv_cataog35") || document.getElementById("indx_custitem_ns_pe_inv_cataog36") || document.getElementById("indx_custitem_ns_pe_inv_cataog37") || document.getElementById("indx_custitem_ns_pe_inv_cataog38") || document.getElementById("indx_custitem_ns_pe_inv_cataog39") || document.getElementById("indx_custitem_ns_pe_inv_cataog40") || document.getElementById("indx_custitem_ns_pe_inv_cataog41"),
+			catalogo_existencia_hddn: document.getElementById("hddn_custitem_ns_pe_inv_cataog24") || document.getElementById("hddn_custitem_ns_pe_inv_cataog25") || document.getElementById("hddn_custitem_ns_pe_inv_cataog26") || document.getElementById("hddn_custitem_ns_pe_inv_cataog27") || document.getElementById("hddn_custitem_ns_pe_inv_cataog28") || document.getElementById("hddn_custitem_ns_pe_inv_cataog29") || document.getElementById("hddn_custitem_ns_pe_inv_cataog30") || document.getElementById("hddn_custitem_ns_pe_inv_cataog31") || document.getElementById("hddn_custitem_ns_pe_inv_cataog32") || document.getElementById("hddn_custitem_ns_pe_inv_cataog33") || document.getElementById("hddn_custitem_ns_pe_inv_cataog34") || document.getElementById("hddn_custitem_ns_pe_inv_cataog35") || document.getElementById("hddn_custitem_ns_pe_inv_cataog36") || document.getElementById("hddn_custitem_ns_pe_inv_cataog37") || document.getElementById("hddn_custitem_ns_pe_inv_cataog38") || document.getElementById("hddn_custitem_ns_pe_inv_cataog39") || document.getElementById("hddn_custitem_ns_pe_inv_cataog40") || document.getElementById("hddn_custitem_ns_pe_inv_cataog41"),
+			catalogo_existencia_indx: document.getElementById("indx_custitem_ns_pe_inv_cataog24") || document.getElementById("indx_custitem_ns_pe_inv_cataog25") || document.getElementById("indx_custitem_ns_pe_inv_cataog26") || document.getElementById("indx_custitem_ns_pe_inv_cataog27") || document.getElementById("indx_custitem_ns_pe_inv_cataog28") || document.getElementById("indx_custitem_ns_pe_inv_cataog29") || document.getElementById("indx_custitem_ns_pe_inv_cataog30") || document.getElementById("indx_custitem_ns_pe_inv_cataog31") || document.getElementById("indx_custitem_ns_pe_inv_cataog32") || document.getElementById("indx_custitem_ns_pe_inv_cataog33") || document.getElementById("indx_custitem_ns_pe_inv_cataog34") || document.getElementById("indx_custitem_ns_pe_inv_cataog35") || document.getElementById("indx_custitem_ns_pe_inv_cataog36") || document.getElementById("indx_custitem_ns_pe_inv_cataog37") || document.getElementById("indx_custitem_ns_pe_inv_cataog38") || document.getElementById("indx_custitem_ns_pe_inv_cataog39") || document.getElementById("indx_custitem_ns_pe_inv_cataog40") || document.getElementById("indx_custitem_ns_pe_inv_cataog41"),
 			metodo_valuacion: document.getElementsByName("inpt_custitem_ns_pe_valuat_method")[0],
-			metodo_valuacion_hddn: document.getElementById("hddn_custitem_ns_pe_valuat_method29") || document.getElementById("hddn_custitem_ns_pe_valuat_method30") || document.getElementById("hddn_custitem_ns_pe_valuat_method31") || document.getElementById("hddn_custitem_ns_pe_valuat_method32") || document.getElementById("hddn_custitem_ns_pe_valuat_method33") || document.getElementById("hddn_custitem_ns_pe_valuat_method34") || document.getElementById("hddn_custitem_ns_pe_valuat_method35") || document.getElementById("hddn_custitem_ns_pe_valuat_method36") || document.getElementById("hddn_custitem_ns_pe_valuat_method37") || document.getElementById("hddn_custitem_ns_pe_valuat_method38") || document.getElementById("hddn_custitem_ns_pe_valuat_method39") || document.getElementById("hddn_custitem_ns_pe_valuat_method40") || document.getElementById("hddn_custitem_ns_pe_valuat_method41") || document.getElementById("hddn_custitem_ns_pe_valuat_method42"),
-			metodo_valuacion_indx: document.getElementById("indx_custitem_ns_pe_valuat_method29") || document.getElementById("indx_custitem_ns_pe_valuat_method30") || document.getElementById("indx_custitem_ns_pe_valuat_method31") || document.getElementById("indx_custitem_ns_pe_valuat_method32") || document.getElementById("indx_custitem_ns_pe_valuat_method33") || document.getElementById("indx_custitem_ns_pe_valuat_method34") || document.getElementById("indx_custitem_ns_pe_valuat_method35") || document.getElementById("indx_custitem_ns_pe_valuat_method36") || document.getElementById("indx_custitem_ns_pe_valuat_method37") || document.getElementById("indx_custitem_ns_pe_valuat_method38") || document.getElementById("indx_custitem_ns_pe_valuat_method39") || document.getElementById("indx_custitem_ns_pe_valuat_method40") || document.getElementById("indx_custitem_ns_pe_valuat_method41") || document.getElementById("indx_custitem_ns_pe_valuat_method42"),
+			metodo_valuacion_hddn: document.getElementById("hddn_custitem_ns_pe_valuat_method24") || document.getElementById("hddn_custitem_ns_pe_valuat_method25") || document.getElementById("hddn_custitem_ns_pe_valuat_method26") || document.getElementById("hddn_custitem_ns_pe_valuat_method27") || document.getElementById("hddn_custitem_ns_pe_valuat_method28") || document.getElementById("hddn_custitem_ns_pe_valuat_method29") || document.getElementById("hddn_custitem_ns_pe_valuat_method30") || document.getElementById("hddn_custitem_ns_pe_valuat_method31") || document.getElementById("hddn_custitem_ns_pe_valuat_method32") || document.getElementById("hddn_custitem_ns_pe_valuat_method33") || document.getElementById("hddn_custitem_ns_pe_valuat_method34") || document.getElementById("hddn_custitem_ns_pe_valuat_method35") || document.getElementById("hddn_custitem_ns_pe_valuat_method36") || document.getElementById("hddn_custitem_ns_pe_valuat_method37") || document.getElementById("hddn_custitem_ns_pe_valuat_method38") || document.getElementById("hddn_custitem_ns_pe_valuat_method39") || document.getElementById("hddn_custitem_ns_pe_valuat_method40") || document.getElementById("hddn_custitem_ns_pe_valuat_method41") || document.getElementById("hddn_custitem_ns_pe_valuat_method42"),
+			metodo_valuacion_indx: document.getElementById("indx_custitem_ns_pe_valuat_method24") || document.getElementById("indx_custitem_ns_pe_valuat_method25") || document.getElementById("indx_custitem_ns_pe_valuat_method26") || document.getElementById("indx_custitem_ns_pe_valuat_method27") || document.getElementById("indx_custitem_ns_pe_valuat_method28") || document.getElementById("indx_custitem_ns_pe_valuat_method29") || document.getElementById("indx_custitem_ns_pe_valuat_method30") || document.getElementById("indx_custitem_ns_pe_valuat_method31") || document.getElementById("indx_custitem_ns_pe_valuat_method32") || document.getElementById("indx_custitem_ns_pe_valuat_method33") || document.getElementById("indx_custitem_ns_pe_valuat_method34") || document.getElementById("indx_custitem_ns_pe_valuat_method35") || document.getElementById("indx_custitem_ns_pe_valuat_method36") || document.getElementById("indx_custitem_ns_pe_valuat_method37") || document.getElementById("indx_custitem_ns_pe_valuat_method38") || document.getElementById("indx_custitem_ns_pe_valuat_method39") || document.getElementById("indx_custitem_ns_pe_valuat_method40") || document.getElementById("indx_custitem_ns_pe_valuat_method41") || document.getElementById("indx_custitem_ns_pe_valuat_method42"),
 			unidad_medida: document.getElementById("custitem_ns_pe_unit_med_display"),
 			unidad_medida_hddn: document.getElementById("hddn_custitem_ns_pe_unit_med_fs"),
 			cod_tipo_existencia: document.getElementById("custitem_ns_pe_cod_existen_type"),
@@ -165,8 +165,8 @@ window.addEventListener("load", (e) => {
 			cuenta_ingresos: document.getElementsByName("incomeaccount_display")[0],
 			cuenta_ingresos_hddn: document.getElementById("hddn_incomeaccount_fs"),
 			programa_fiscal: document.getElementsByName("inpt_taxschedule")[0],
-			programa_fiscal_hddn: document.getElementById("hddn_taxschedule28") || document.getElementById("hddn_taxschedule29") || document.getElementById("hddn_taxschedule30") || document.getElementById("hddn_taxschedule31") || document.getElementById("hddn_taxschedule32") || document.getElementById("hddn_taxschedule33") || document.getElementById("hddn_taxschedule34") || document.getElementById("hddn_taxschedule35") || document.getElementById("hddn_taxschedule36") || document.getElementById("hddn_taxschedule37") || document.getElementById("hddn_taxschedule38") || document.getElementById("hddn_taxschedule39") || document.getElementById("hddn_taxschedule40"),
-			programa_fiscal_indx: document.getElementById("indx_taxschedule28") || document.getElementById("indx_taxschedule29") || document.getElementById("indx_taxschedule30") || document.getElementById("indx_taxschedule31") || document.getElementById("indx_taxschedule32") || document.getElementById("indx_taxschedule33") || document.getElementById("indx_taxschedule34") || document.getElementById("indx_taxschedule35") || document.getElementById("indx_taxschedule36") || document.getElementById("indx_taxschedule37") || document.getElementById("indx_taxschedule38") || document.getElementById("indx_taxschedule39") || document.getElementById("indx_taxschedule40"),
+			programa_fiscal_hddn: document.getElementById("hddn_taxschedule24") || document.getElementById("hddn_taxschedule25") || document.getElementById("hddn_taxschedule26") || document.getElementById("hddn_taxschedule27") || document.getElementById("hddn_taxschedule28") || document.getElementById("hddn_taxschedule29") || document.getElementById("hddn_taxschedule30") || document.getElementById("hddn_taxschedule31") || document.getElementById("hddn_taxschedule32") || document.getElementById("hddn_taxschedule33") || document.getElementById("hddn_taxschedule34") || document.getElementById("hddn_taxschedule35") || document.getElementById("hddn_taxschedule36") || document.getElementById("hddn_taxschedule37") || document.getElementById("hddn_taxschedule38") || document.getElementById("hddn_taxschedule39") || document.getElementById("hddn_taxschedule40"),
+			programa_fiscal_indx: document.getElementById("indx_taxschedule24") || document.getElementById("indx_taxschedule25") || document.getElementById("indx_taxschedule26") || document.getElementById("indx_taxschedule27") || document.getElementById("indx_taxschedule28") || document.getElementById("indx_taxschedule29") || document.getElementById("indx_taxschedule30") || document.getElementById("indx_taxschedule31") || document.getElementById("indx_taxschedule32") || document.getElementById("indx_taxschedule33") || document.getElementById("indx_taxschedule34") || document.getElementById("indx_taxschedule35") || document.getElementById("indx_taxschedule36") || document.getElementById("indx_taxschedule37") || document.getElementById("indx_taxschedule38") || document.getElementById("indx_taxschedule39") || document.getElementById("indx_taxschedule40"),
 		},
 		llenar_campos: (linea, unidad) => {
 			let _unidad_medida = "";
@@ -205,7 +205,6 @@ window.addEventListener("load", (e) => {
 					obj.campos_autocompletar.subsidiaria_biomont.classList.remove("dropdownNotSelected");
 					obj.campos_autocompletar.subsidiaria_biomont.classList.add("dropdownSelected");
 					obj.campos_autocompletar.inactivo.checked = elemento.inactivo;
-					//obj.campos_autocompletar.span_inactivo.setAttribute("style", "pointer-events: none;");
 					obj.campos_autocompletar.metodo_calculo_costo.value = elemento.metodo_calculo_costo;
 					obj.campos_autocompletar.metodo_calculo_costo_hddn.value = elemento.metodo_calculo_costo_hddn;
 					obj.campos_autocompletar.metodo_calculo_costo_indx.value = elemento.metodo_calculo_costo_indx;
@@ -280,7 +279,7 @@ window.addEventListener("load", (e) => {
 							document.getElementsByName("st")[0].remove();
 							document.getElementById("tr_Search").remove();
 							let array_tr = [...document.getElementById("inner_popup_div").childNodes[0].childNodes[1].children];
-							let arrayLineas = []
+							let arrayLineas = [];
 							data_base.forEach(el => {
 								return arrayLineas.push(el.linea);
 							});
@@ -445,7 +444,7 @@ window.addEventListener("load", (e) => {
 				})
 				.catch(error => console.error(error));
 		},
-		enviar_correo: () => {
+		enviar_correo: (nombre_ejecutor, email_notificacion, concepto, accion) => {
 			obj.main_form.addEventListener("submit", (e) => {
 				e.preventDefault();
 
@@ -466,11 +465,14 @@ window.addEventListener("load", (e) => {
 
 				let dato = {
 					id_formulario: obj.id_formulario.value,
-					codigo_articulo: obj.input_codigo_articulo.value,
-					descripcion_articulo: obj.input_descripcion_articulo.value,
-					nombre_aprobador: obj.input_nombre_aprobador.value,
-					email_aprobador: document.querySelector("#email_fs a").innerHTML,
-					linea_articulo: obj.input_linea_articulo.value,
+                    codigo_articulo: obj.input_codigo_articulo.value,
+                    descripcion_articulo: obj.input_descripcion_articulo.value,
+                    nombre_ejecutor: nombre_ejecutor.value,
+                    email_notificacion: ['jpena@biomont.com.pe', 'fcastro@biomont.com.pe'],
+                    email_notificacion_aux: email_notificacion,     //auxiliar, solo para probar
+                    linea_articulo: obj.input_linea_articulo.value,
+                    concepto: concepto,
+                    accion: accion
 				};
 
 				fetch(BASE_URL + "/correlativoarticulo/sendEmailNotification", {
@@ -575,9 +577,7 @@ window.addEventListener("load", (e) => {
 						correlativo_vista: +obj.input_codigo_articulo.value.replace(/[^0-9]+/g, "")
 					};
 
-					fetch(
-						BASE_URL + "/correlativoarticulo/updateCorrelativoLineaArticulo",
-						{
+					fetch(BASE_URL + "/correlativoarticulo/updateCorrelativoLineaArticulo",{
 							method: "POST",
 							headers: {
 								"Content-Type":
@@ -836,170 +836,5 @@ window.addEventListener("load", (e) => {
 		obj.input_nombre_aprobador.setAttribute('style', 'pointer-events: none;');
 
 	}
-
-	/*if (obj.id_formulario.value === "") {
-		console.log("Guardar");
-
-		if (document.getElementsByName("inpt_customform")[0]) {
-		document
-			.getElementsByName("inpt_customform")[0]
-			.setAttribute("style", "pointer-events: none;");
-		}
-		document
-		.getElementById("custitem3_display")
-		.setAttribute("style", "pointer-events: none;");
-
-		const aprobador = document.getElementsByName("inpt_custitem24")[0];
-		const aprobador_flecha =
-		document.getElementById("inpt_custitem246_arrow") ||
-		document.getElementById("inpt_custitem247_arrow") ||
-		document.getElementById("inpt_custitem2410_arrow") ||
-		document.getElementById("inpt_custitem2411_arrow");
-
-		const accion_aprobador_popup = document.querySelector(
-		"#custitem24_fs span.uir-field-widget"
-		);
-
-		const accion_aprobar = document.getElementsByName("inpt_custitem25")[0];
-		const accion_aprobar_flecha =
-		document.getElementById("inpt_custitem255_arrow") ||
-		document.getElementById("inpt_custitem256_arrow") ||
-		document.getElementById("inpt_custitem259_arrow") ||
-		document.getElementById("inpt_custitem2510_arrow");
-		const accion_aprobar_hddn =
-		document.getElementById("hddn_custitem257") ||
-		document.getElementById("hddn_custitem256") ||
-		document.getElementById("hddn_custitem255") ||
-		document.getElementById("hddn_custitem259") ||
-		document.getElementById("hddn_custitem2510");
-		const accion_aprobar_indx =
-		document.getElementById("indx_custitem257") ||
-		document.getElementById("indx_custitem256") ||
-		document.getElementById("indx_custitem255") ||
-		document.getElementById("indx_custitem259") ||
-		document.getElementById("indx_custitem2510");
-
-		const accion_aprobar_popup = document.querySelector(
-		"#custitem25_fs span.uir-field-widget"
-		);
-
-		aprobador.setAttribute("style", "pointer-events: none;");
-		aprobador_flecha.setAttribute("style", "display: none;");
-		accion_aprobar.value = "PENDIENTE";
-		accion_aprobar_hddn.value = "1";
-		accion_aprobar_indx.value = "2";
-
-		accion_aprobar.setAttribute("style", "pointer-events: none;");
-		accion_aprobar_flecha.setAttribute("style", "display: none;");
-		if (accion_aprobador_popup) {
-		accion_aprobador_popup.setAttribute("style", "display: none;");
-		accion_aprobar_popup.setAttribute("style", "display: none;");
-		}
-
-		obj.actualiza_correlativo();
-
-		obj.conexion();
-	} else {
-		console.log("Editar");
-
-		if (
-		document
-			.getElementsByName("purchasedescription")[0]
-			.value.lastIndexOf(" ") !==
-		document.getElementsByName("purchasedescription")[0].value.length - 1
-		) {
-		obj.setBotonFirmaAprobado();
-		}
-
-		if (document.getElementsByName("purchasedescription")[0].value !== "") {
-		const aprobador_sesion = document.querySelector("div#uif38 span");
-
-		const aprobador = document.getElementsByName("inpt_custitem24")[0];
-		const aprobador_hddn =
-			document.getElementById("hddn_custitem249") ||
-			document.getElementById("hddn_custitem2411") ||
-			document.getElementById("hddn_custitem248");
-		const aprobador_indx =
-			document.getElementById("indx_custitem249") ||
-			document.getElementById("indx_custitem2411") ||
-			document.getElementById("indx_custitem248");
-		const aprobador_flecha =
-			document.getElementById("inpt_custitem249_arrow") ||
-			document.getElementById("inpt_custitem2411_arrow") ||
-			document.getElementById("inpt_custitem248_arrow");
-		const aprobador_popup = document.querySelector(
-			"#custitem24_fs span.uir-field-widget"
-		);
-
-		const accion_aprobar = document.getElementsByName("inpt_custitem25")[0];
-		accion_aprobar.value = "APROBADO";
-		const accion_aprobar_hddn =
-			document.getElementById("hddn_custitem258") ||
-			document.getElementById("hddn_custitem257");
-		accion_aprobar_hddn.value = "2";
-		const accion_aprobar_indx =
-			document.getElementById("indx_custitem258") ||
-			document.getElementById("indx_custitem257");
-		accion_aprobar_indx.value = "2";
-		const accion_aprobar_flecha =
-			document.getElementById("inpt_custitem258_arrow") ||
-			document.getElementById("inpt_custitem257_arrow");
-		const accion_aprobar_popup = document.querySelector(
-			"#custitem25_fs span.uir-field-widget"
-		);
-
-		const codigo_articulo = document.getElementsByName("itemid")[0];
-
-		switch (aprobador_sesion.innerText) {
-			case "JUAN ROBERTO PEÑA MALASQUEZ":
-			aprobador.value = "ANGELO VILCHEZ MARQUEZ";
-			aprobador.setAttribute("style", "pointer-events: none;");
-			aprobador_flecha.setAttribute("style", "display: none;");
-			aprobador_popup.setAttribute("style", "display: none;");
-			aprobador_hddn.value = "1";
-			aprobador_indx.value = "2";
-			accion_aprobar.setAttribute("style", "pointer-events: none;");
-			accion_aprobar_flecha.setAttribute("style", "display: none;");
-			accion_aprobar_popup.setAttribute("style", "display: none;");
-			//codigo_articulo.setAttribute('style','pointer-events: none;');
-			break;
-			case "ANGELO VILCHEZ MARQUEZ":
-			aprobador.value = "ANGELO VILCHEZ MARQUEZ";
-			aprobador.setAttribute("style", "pointer-events: none;");
-			aprobador_flecha.setAttribute("style", "display: none;");
-			aprobador_popup.setAttribute("style", "display: none;");
-			aprobador_hddn.value = "1";
-			aprobador_indx.value = "2";
-			accion_aprobar.setAttribute("style", "pointer-events: none;");
-			accion_aprobar_flecha.setAttribute("style", "display: none;");
-			accion_aprobar_popup.setAttribute("style", "display: none;");
-			//codigo_articulo.setAttribute('style','pointer-events: none;');
-			break;
-			case "KEVIN MARCEL CELESTINO PUCHOC":
-			aprobador.value = "KEVIN MARCEL CELESTINO PUCHOC";
-			aprobador.setAttribute("style", "pointer-events: none;");
-			aprobador_flecha.setAttribute("style", "display: none;");
-			aprobador_popup.setAttribute("style", "display: none;");
-			aprobador_hddn.value = "2";
-			aprobador_indx.value = "4";
-			accion_aprobar.setAttribute("style", "pointer-events: none;");
-			accion_aprobar_flecha.setAttribute("style", "display: none;");
-			accion_aprobar_popup.setAttribute("style", "display: none;");
-			//codigo_articulo.setAttribute('style','pointer-events: none;');
-			break;
-			case "LILIAN ALINA BASUALDO SOTO":
-			aprobador.value = "LILIAN ALINA BASUALDO SOTO";
-			aprobador.setAttribute("style", "pointer-events: none;");
-			aprobador_flecha.setAttribute("style", "display: none;");
-			aprobador_popup.setAttribute("style", "display: none;");
-			aprobador_hddn.value = "4";
-			aprobador_indx.value = "5";
-			accion_aprobar.setAttribute("style", "pointer-events: none;");
-			accion_aprobar_flecha.setAttribute("style", "display: none;");
-			accion_aprobar_popup.setAttribute("style", "display: none;");
-			//codigo_articulo.setAttribute('style','pointer-events: none;');
-			break;
-		}
-		}
-	}*/
+	
 });
