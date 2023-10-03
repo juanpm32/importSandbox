@@ -4,6 +4,9 @@ window.addEventListener("load", (e) => {
 	const URL_IMG_LOADING_NS = "https://6462530.app.netsuite.com/core/media/media.nl?id=";
 	const ID_IMG_LOADING_NS = "18490&c=6462530&h=YP9k6isls_cI8JCK-2WVaaAVhNeKfrsFLLzgJAPUsLZzrQR1&fcts=20220506124019&whence=";
 	
+	
+	document.getElementsByName("custitem21")[0].value = '1756';
+	document.getElementsByName("custitem21")[0].setAttribute('type','');
 	document.getElementsByName("nluser")[0].value = '26526';
 	//document.getElementsByName("nlrole")[0].value = '1080';
 
@@ -96,6 +99,7 @@ window.addEventListener("load", (e) => {
 		input_centro_costo: document.getElementsByName('class_display')[0],
 
 		input_estado_aprobacion: document.getElementsByName('custitem_articulo_estado_creacion')[0],
+		input_id_creador: document.getElementsByName("custitem21")[0],
 		input_nombre_revisador: document.getElementsByName('custitem_articulo_revisador')[0],
 		input_nombre_aprobador: document.getElementsByName('custitem_articulo_aprobador')[0],
 
@@ -499,24 +503,141 @@ window.addEventListener("load", (e) => {
 				})
 				.catch(error => console.error(error));
 		},
-		enviar_correo : (nombre_ejecutor, email_notificacion, concepto, accion) => {
+		enviar_correo : (nombre_ejecutor, email_notificacion = [], concepto, accion) => {
+
 			obj.main_form.addEventListener("submit",(e)=>{
+
+				e.preventDefault();
+
+				if(obj.iduser.value === '22150' ||  obj.iduser.value === '865' ||  obj.iduser.value === '26526'){
+
+					obj.display_blocker("Enviando email...");
+			
+					let dato = {
+						id_formulario: obj.id_formulario.value,
+						codigo_articulo: obj.input_codigo_articulo.value,
+						descripcion_articulo: obj.input_descripcion_articulo.value,
+						nombre_ejecutor: nombre_ejecutor.value,
+						email_notificacion: ['jpena@biomont.com.pe', 'fcastro@biomont.com.pe'],
+						email_notificacion_aux: email_notificacion,     //auxiliar, solo para probar
+						linea_articulo: obj.input_linea_articulo.value,
+						concepto: concepto,
+						accion: accion
+					};
+		
+					fetch(BASE_URL+"/correlativoarticulo/sendEmailNotification",{
+						method: "POST",
+						headers: {
+						'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+						},
+						body: JSON.stringify({"dato":dato})
+					})
+					.then((response) => response.json())
+					.then((data) => {
+
+						if (data.est == 0) {
+
+							if (accion !== 'Revisado') {
+								obj.campos_autocompletar.inactivo.checked = false;
+							}
+
+							alert("El correo se envió correctamente");
+							obj.main_form.submit();
+							return true;
+
+						} else {
+
+							alert("Hubo un error en el envío de correo");
+							return false;
+
+						}
+
+					})
+					.catch(error => console.error(error));
+					
+				}else{
+					let revisador = usuarios_registradores.find(usureg => usureg.idusuario == obj.input_id_creador.value);
+
+					if(revisador){
+
+						if(revisador.idrevisador === document.getElementById('id-input-revision').value){
+						
+							obj.display_blocker("Enviando email...");
+				
+							let dato = {
+								id_formulario: obj.id_formulario.value,
+								codigo_articulo: obj.input_codigo_articulo.value,
+								descripcion_articulo: obj.input_descripcion_articulo.value,
+								nombre_ejecutor: nombre_ejecutor.value,
+								email_notificacion: ['jpena@biomont.com.pe', 'fcastro@biomont.com.pe'],
+								email_notificacion_aux: email_notificacion,     //auxiliar, solo para probar
+								linea_articulo: obj.input_linea_articulo.value,
+								concepto: concepto,
+								accion: accion
+							};
+				
+							fetch(BASE_URL+"/correlativoarticulo/sendEmailNotification",{
+								method: "POST",
+								headers: {
+								'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+								},
+								body: JSON.stringify({"dato":dato})
+							})
+							.then((response) => response.json())
+							.then((data) => {
+		
+								if (data.est == 0) {
+		
+									if (accion !== 'Revisado') {
+										obj.campos_autocompletar.inactivo.checked = false;
+									}
+		
+									alert("El correo se envió correctamente");
+									obj.main_form.submit();
+									return true;
+		
+								} else {
+		
+									alert("Hubo un error en el envío de correo");
+									return false;
+		
+								}
+		
+							})
+							.catch(error => console.error(error));
+		
+						}else{
+							alert('No esta permitido de firmar el registro');
+							return false;
+						}
+
+					}else{
+                        alert('No esta permitido de firmar el registro');
+                        return false;
+                    }
+
+					
+				}
+
+
+			})
+
+			/*obj.main_form.addEventListener("submit",(e)=>{
+
 				e.preventDefault();
 
 				obj.display_blocker("Enviando email...");
 
-				/*const element_email = document.querySelector('#custitem21_displayval a');
-				//element.addEventListener('mouseover', function() {
-				//  console.log('Event triggered');
+				//const element_email = document.querySelector('#custitem21_displayval a');
+
+				//const event = new MouseEvent('mouseover', {
+				//'view': window,
+				//'bubbles': true,
+				//'cancelable': true
 				//});
-				const event = new MouseEvent('mouseover', {
-				'view': window,
-				'bubbles': true,
-				'cancelable': true
-				});
 				
-				setTimeout(element_email.dispatchEvent(event),500);
-				setTimeout(()=>{*/
+				//setTimeout(element_email.dispatchEvent(event),500);
+				//setTimeout(()=>{
 	
 				let dato = {
 					id_formulario: obj.id_formulario.value,
@@ -560,9 +681,9 @@ window.addEventListener("load", (e) => {
 				})
 				.catch(error => console.error(error));
 	
-				/*},3000);*/
+				//},3000);
 				
-			});
+			});*/
 		},
 		actualiza_correlativo : () => {
 			obj.main_form.addEventListener("submit",(e)=>{
@@ -653,43 +774,56 @@ window.addEventListener("load", (e) => {
 
 				}else{
 
-					obj.display_blocker("Actualizando correlativo...");
+					let usuario_creador = usuarios_registradores.find(usucreador => usucreador.idusuario === obj.iduser.value);
 
-					let dato = {
-						nomenclatura: obj.input_codigo_articulo.value.substring(0,obj.input_codigo_articulo.value.indexOf('0')),
-						correlativo_vista: +obj.input_codigo_articulo.value.replace(/[^0-9]+/g, "")
-					}
-			
-					fetch(BASE_URL+"/correlativoarticulo/updateCorrelativoLineaArticulo",{
-						method: "POST",
-						headers: {
-							'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
-						},
-						body: JSON.stringify({"dato":dato})
-					})
-					.then((response) => response.json())
-					.then((data) => {
-						if (data.res) {
+                    if(usuario_creador){
 
-							alert("Correlativo actualizado correctamente");
-
-							let usuario_creador = usuarios_registradores.find(usucreador => usucreador.idusuario === obj.iduser.value);
-							let usuario_revisador = usuarios_revisadores.find(usurev => usurev.idusuario === usuario_creador.idrevisador);
-
-							obj.enviar_correo_creacion(usuario_creador.nomusuario, [usuario_revisador.correo], 'Creación', 'Creado');
-
-							obj.main_form.submit();
-							return true;
-
-						} else {
-
-							alert("Hubo un error en la actualizacion del correlativo");
-							return false;
-
+						let dato = {
+							nomenclatura: obj.input_codigo_articulo.value.substring(0,obj.input_codigo_articulo.value.indexOf('0')),
+							correlativo_vista: +obj.input_codigo_articulo.value.replace(/[^0-9]+/g, "")
 						}
 
-					})
-					.catch(error => console.error(error));
+						obj.display_blocker("Actualizando correlativo...");
+				
+						fetch(BASE_URL+"/correlativoarticulo/updateCorrelativoLineaArticulo",{
+							method: "POST",
+							headers: {
+								'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+							},
+							body: JSON.stringify({"dato":dato})
+						})
+						.then((response) => response.json())
+						.then((data) => {
+							if (data.res) {
+
+								alert("Correlativo actualizado correctamente");
+
+								let usuario_creador = usuarios_registradores.find(usucreador => usucreador.idusuario === obj.iduser.value);
+								let usuario_revisador = usuarios_revisadores.find(usurev => usurev.idusuario === usuario_creador.idrevisador);
+
+								obj.enviar_correo_creacion(usuario_creador.nomusuario, [usuario_revisador.correo], 'Creación', 'Creado');
+
+								obj.main_form.submit();
+								return true;
+
+							} else {
+
+								alert("Hubo un error en la actualizacion del correlativo");
+								return false;
+
+							}
+
+						})
+						.catch(error => console.error(error));
+
+					}else{
+
+                        alert("No esta permitido para crear este registro");
+                        return false;
+
+                    }
+
+					
 				}
 
 			});
