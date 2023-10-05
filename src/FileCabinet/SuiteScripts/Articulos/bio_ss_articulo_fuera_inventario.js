@@ -4,59 +4,61 @@ window.addEventListener("load", (e) => {
     const URL_IMG_LOADING_NS = "https://6462530.app.netsuite.com/core/media/media.nl?id=";
     const ID_IMG_LOADING_NS = "18490&c=6462530&h=YP9k6isls_cI8JCK-2WVaaAVhNeKfrsFLLzgJAPUsLZzrQR1&fcts=20220506124019&whence=";
 
-    //document.getElementsByName("nluser")[0].value = '22150';
+    document.getElementsByName("custitem21")[0].value = '27348';
+    document.getElementsByName("custitem21")[0].setAttribute('type', '');
+    document.getElementsByName("nluser")[0].value = '24738';
     //document.getElementsByName("nlrole")[0].value = '1080';
 
     if (document.getElementById('subtype').value === 'Sale' || document.getElementById('subtype').value === 'Resale') {
 
         const usuarios_registradores = [
-            { area: 'ENSAYOS CLINICOS', nomusuario: 'JOE LEO PIZARRO PAREDES', correo: 'jpizarro@biomont.com.pe', idusuario: '1746', idrol:null, nomrol:null, idrevisador: '1739' },
-            { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', nomusuario: 'KARIN KATHERIN MUGA ROJAS', correo: 'kmuga@biomont.com.pe', idusuario: '298', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '301' },
-            { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', nomusuario: 'LIZ MARIANELA GOMEZ BRICEÑO', correo: 'lgomez@biomont.com.pe', idusuario: '300', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '301' },
-            { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', nomusuario: 'LIZET JANET ALFARO VERDE', correo: 'analistascc@biomont.com.pe', idusuario: '1756', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '301' },
-            { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', nomusuario: 'SUSAN LIZET ELIAS DA SILVA', correo: 'selias@biomont.com.pe', idusuario: '303', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '301' },
-            { area: 'MANTENIMIENTO', nomusuario: 'MELISSA PIMENTEL MEJIA', correo: 'mpimentel@biomont.com.pe', idusuario: '290', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '290' },
-            { area: 'MANTENIMIENTO', nomusuario: 'SERGIO RODRIGUEZ POLAR', correo: 'srodriguez@biomont.com.pe', idusuario: '27348', idrol:null, nomrol:null, idrevisador: '290' },
-            { area: 'INVESTIGACION Y DESARROLLO', nomusuario: 'MICHAEL TONY OLLERO CAMARENA', correo: 'mollero@biomont.com.pe', idusuario: '22186', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '1733' },
-            { area: 'INVESTIGACION Y DESARROLLO', nomusuario: 'ANABELL CAMPOS CALERO', correo: 'acampos@biomont.com.pe', idusuario: '22197', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '1733' },
-            { area: 'INVESTIGACION Y DESARROLLO', nomusuario: 'YOZELY SOTO VILCHEZ', correo: 'ysoto@biomont.com.pe', idusuario: '312', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '1733' },
-            { area: 'PRODUCCION', nomusuario: 'MARY VICENTA MIRANDA CACEDA', correo: 'mmiranda@biomont.com.pe', idusuario: '295', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '283' },
-            { area: 'COMERCIAL', nomusuario: 'BLANCA SARITA ELUGO GUEVARA', correo: 'belugo@biomont.com.pe', idusuario: '274', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '274' },
-            { area: 'TI', nomusuario: 'MAGNO LUCIO REVATTA ÑAÑEZ', correo: 'mrevatta@biomont.com.pe', idusuario: '319', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '319' },
-            { area: 'CONTABILIDAD', nomusuario: 'PAOLO EPIFANIO VICHARRA FLORIAN', correo: 'pvicharra@Biomont.com.pe', idusuario: '296', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '296' },
-            { area: 'RRHH', nomusuario: 'WILMER PINEDO HUAMAN', correo: 'wpinedo@biomont.com.pe', idusuario: '1802', idrol:null, nomrol:null, idrevisador: '1802' },
-            { area: 'RRHH', nomusuario: 'GERIL BERENIZE CASTRO HUAMAN', correo: 'gcastro@biomont.com.pe', idusuario: '1817', idrol:null, nomrol:null, idrevisador: '1817' },
-            { area: 'ADMINISTRACION', nomusuario: 'ALEXANDRA MEYLIN DURAND BALDEON', correo: 'adurand@biomont.com.pe', idusuario: '22194', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '276' },
-            { area: 'ALMACEN', nomusuario: 'CESAR ENRIQUE SUNCION SOSA', correo: 'csuncion@biomont.com.pe', idusuario: '285', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '285' },
-            { area: 'MARKETING', nomusuario: 'LINCOLN GIAMPIERRE ZAMUDIO CASTILLO', correo: 'lzamudio@biomont.com.pe', idusuario: '24738', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '24738' },
-            { area: 'MARKETING', nomusuario: 'JEAN FRANCO ALCANTARA RODRIGUEZ', correo: 'jalcantara@biomont.com.pe', idusuario: '27817', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '27817' },
-            { area: 'MARKETING', nomusuario: 'ROSALIA GARFIAS DE LA CRUZ', correo: 'rgarfias@biomont.com.pe', idusuario: '1796', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '1796' },
-            { area: 'FINANZAS', nomusuario: 'ALBINA ROSA YARINGAÑO PIZARRO', correo: 'ayaringano@biomont.com.pe', idusuario: '170', idrol: '1120', nomrol:'BIO_ROL_CREACION_ARTICULO', idrevisador: '170' },
+            { area: 'ENSAYOS CLINICOS', nomusuario: 'JOE LEO PIZARRO PAREDES', correo: 'jpizarro@biomont.com.pe', idusuario: '1746', idrol: null, nomrol: null, idrevisador: '1739' },
+            { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', nomusuario: 'KARIN KATHERIN MUGA ROJAS', correo: 'kmuga@biomont.com.pe', idusuario: '298', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '301' },
+            { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', nomusuario: 'LIZ MARIANELA GOMEZ BRICEÑO', correo: 'lgomez@biomont.com.pe', idusuario: '300', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '301' },
+            { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', nomusuario: 'LIZET JANET ALFARO VERDE', correo: 'analistascc@biomont.com.pe', idusuario: '1756', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '301' },
+            { area: 'CONTROL Y ASEGURAMIENTO DE LA CALIDAD', nomusuario: 'SUSAN LIZET ELIAS DA SILVA', correo: 'selias@biomont.com.pe', idusuario: '303', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '301' },
+            { area: 'MANTENIMIENTO', nomusuario: 'MELISSA PIMENTEL MEJIA', correo: 'mpimentel@biomont.com.pe', idusuario: '290', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '290' },
+            { area: 'MANTENIMIENTO', nomusuario: 'SERGIO RODRIGUEZ POLAR', correo: 'srodriguez@biomont.com.pe', idusuario: '27348', idrol: null, nomrol: null, idrevisador: '290' },
+            { area: 'INVESTIGACION Y DESARROLLO', nomusuario: 'MICHAEL TONY OLLERO CAMARENA', correo: 'mollero@biomont.com.pe', idusuario: '22186', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '1733' },
+            { area: 'INVESTIGACION Y DESARROLLO', nomusuario: 'ANABELL CAMPOS CALERO', correo: 'acampos@biomont.com.pe', idusuario: '22197', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '1733' },
+            { area: 'INVESTIGACION Y DESARROLLO', nomusuario: 'YOZELY SOTO VILCHEZ', correo: 'ysoto@biomont.com.pe', idusuario: '312', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '1733' },
+            { area: 'PRODUCCION', nomusuario: 'MARY VICENTA MIRANDA CACEDA', correo: 'mmiranda@biomont.com.pe', idusuario: '295', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '283' },
+            { area: 'COMERCIAL', nomusuario: 'BLANCA SARITA ELUGO GUEVARA', correo: 'belugo@biomont.com.pe', idusuario: '274', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '274' },
+            { area: 'TI', nomusuario: 'MAGNO LUCIO REVATTA ÑAÑEZ', correo: 'mrevatta@biomont.com.pe', idusuario: '319', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '319' },
+            { area: 'CONTABILIDAD', nomusuario: 'PAOLO EPIFANIO VICHARRA FLORIAN', correo: 'pvicharra@Biomont.com.pe', idusuario: '296', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '296' },
+            { area: 'RRHH', nomusuario: 'WILMER PINEDO HUAMAN', correo: 'wpinedo@biomont.com.pe', idusuario: '1802', idrol: null, nomrol: null, idrevisador: '1802' },
+            { area: 'RRHH', nomusuario: 'GERIL BERENIZE CASTRO HUAMAN', correo: 'gcastro@biomont.com.pe', idusuario: '1817', idrol: null, nomrol: null, idrevisador: '1817' },
+            { area: 'ADMINISTRACION', nomusuario: 'ALEXANDRA MEYLIN DURAND BALDEON', correo: 'adurand@biomont.com.pe', idusuario: '22194', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '276' },
+            { area: 'ALMACEN', nomusuario: 'CESAR ENRIQUE SUNCION SOSA', correo: 'csuncion@biomont.com.pe', idusuario: '285', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '285' },
+            { area: 'MARKETING', nomusuario: 'LINCOLN GIAMPIERRE ZAMUDIO CASTILLO', correo: 'lzamudio@biomont.com.pe', idusuario: '24738', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '24738' },
+            { area: 'MARKETING', nomusuario: 'JEAN FRANCO ALCANTARA RODRIGUEZ', correo: 'jalcantara@biomont.com.pe', idusuario: '27817', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '27817' },
+            { area: 'MARKETING', nomusuario: 'ROSALIA GARFIAS DE LA CRUZ', correo: 'rgarfias@biomont.com.pe', idusuario: '1796', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '1796' },
+            { area: 'FINANZAS', nomusuario: 'ALBINA ROSA YARINGAÑO PIZARRO', correo: 'ayaringano@biomont.com.pe', idusuario: '170', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '170' },
         ];
 
         const usuarios_revisadores = [
-            { nomusuario: 'IVAN NOLY REYNA WATANABE', correo: 'ireyna@biomont.com.pe', idusuario: '1739', idrol:null, nomrol:null, correos_adicionales: ['ireyna@biomont.com.pe', 'jpizarro@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'EDISON RONALD VERA VASQUEZ', correo: 'evera@biomont.com.pe', idusuario: '301', idrol: '1076', nomrol:'BIO_ROL_CALIDAD', correos_adicionales: ['evera@biomont.com.pe', 'kmuga@biomont.com.pe', 'lgomez@biomont.com.pe', 'analistascc@biomont.com.pe', 'selias@biomont.com.pe', 'dguzman@Biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'MELISSA PIMENTEL MEJIA', correo: 'mpimentel@biomont.com.pe', idusuario: '290', idrol: '1090', nomrol:'BIO_ROL_OPERACIONES_PLANTA_ASISTENTE', correos_adicionales: ['mantenimiento@biomont.com.pe', 'srodriguez@biomont.com.pe', 'mantenimiento.adm@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'ERIKA LUCIA TACUNAN RIVEROS', correo: 'etacunan@biomont.com.pe', idusuario: '1733', idrol: '1066', nomrol:'BIO_ROL_ID', correos_adicionales: ['id@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'CONSTANTINO IVAN POMIANO JESUS', correo: 'cpomiano@biomont.com.pe', idusuario: '283', idrol: '1065', nomrol:'BIO_ROL_PRODUCCION', correos_adicionales: ['cpomiano@biomont.com.pe', 'mmiranda@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'BLANCA SARITA ELUGO GUEVARA', correo: 'belugo@biomont.com.pe', idusuario: '274', idrol: '1074', nomrol:'BIO_ROL_COMERCIAL_ASISTENTE', correos_adicionales: ['belugo@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'CESAR ENRIQUE SUNCION SOSA', correo: 'csuncion@biomont.com.pe', idusuario: '285', idrol: '1069', nomrol:'BIO_ROL_ALMACEN', correos_adicionales: ['csuncion@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'GERIL BERENIZE CASTRO HUAMAN', correo: 'gcastro@biomont.com.pe', idusuario: '1817', idrol:null, nomrol:null, correos_adicionales: ['gcastro@biomont.com.pe', 'wpinedo@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'WILMER PINEDO HUAMAN', correo: 'wpinedo@biomont.com.pe', idusuario: '1802', idrol:null, nomrol:null, correos_adicionales: ['wpinedo@biomont.com.pe', 'gcastro@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'PAOLO EPIFANIO VICHARRA FLORIAN', correo: 'pvicharra@Biomont.com.pe', idusuario: '296', idrol: '1051', nomrol:'BIO_ROL_CONTABILIDAD_ASISTENTE', correos_adicionales: ['pvicharra@Biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'MAGNO LUCIO REVATTA ÑAÑEZ', correo: 'mrevatta@biomont.com.pe', idusuario: '319', idrol: '1116', nomrol:'BIO_ROL_CENTRO_EMPLEADOS', correos_adicionales: ['ti@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'DENIS BETTY ALAYO MERGILDO', correo: 'dalayo@biomont.com.pe', idusuario: '276', idrol: '1082', nomrol:'BIO_ROL_ADMINISTRACION', correos_adicionales: ['adurand@Biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'LINCOLN GIAMPIERRE ZAMUDIO CASTILLO', correo: 'lzamudio@biomont.com.pe', idusuario: '24738', idrol:null, nomrol:null, correos_adicionales: ['lzamudio@biomont.com.pe', 'jalcantara@biomont.com.pe', 'rgarfias@biomont.com.pe', 'pliviac@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'JEAN FRANCO ALCANTARA RODRIGUEZ', correo: 'jalcantara@biomont.com.pe', idusuario: '27817', idrol:null, nomrol:null, correos_adicionales: ['lzamudio@biomont.com.pe', 'jalcantara@biomont.com.pe', 'rgarfias@biomont.com.pe', 'pliviac@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'ROSALIA GARFIAS DE LA CRUZ', correo: 'rgarfias@biomont.com.pe', idusuario: '1796', idrol: '1085', nomrol:'BIO_ROL_MARKETING_ASISTENTE', correos_adicionales: ['lzamudio@biomont.com.pe', 'jalcantara@biomont.com.pe', 'rgarfias@biomont.com.pe', 'pliviac@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
-            { nomusuario: 'ALBINA ROSA YARINGAÑO PIZARRO', correo: 'ayaringano@biomont.com.pe', idusuario: '170', idrol: '1059', nomrol:'BIO_ROL_FINANZAS_ASISTENTE', correos_adicionales: ['ayaringano@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'IVAN NOLY REYNA WATANABE', correo: 'ireyna@biomont.com.pe', idusuario: '1739', idrol: null, nomrol: null, correos_adicionales: ['ireyna@biomont.com.pe', 'jpizarro@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'EDISON RONALD VERA VASQUEZ', correo: 'evera@biomont.com.pe', idusuario: '301', idrol: '1076', nomrol: 'BIO_ROL_CALIDAD', correos_adicionales: ['evera@biomont.com.pe', 'kmuga@biomont.com.pe', 'lgomez@biomont.com.pe', 'analistascc@biomont.com.pe', 'selias@biomont.com.pe', 'dguzman@Biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'MELISSA PIMENTEL MEJIA', correo: 'mpimentel@biomont.com.pe', idusuario: '290', idrol: '1090', nomrol: 'BIO_ROL_OPERACIONES_PLANTA_ASISTENTE', correos_adicionales: ['mantenimiento@biomont.com.pe', 'srodriguez@biomont.com.pe', 'mantenimiento.adm@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'ERIKA LUCIA TACUNAN RIVEROS', correo: 'etacunan@biomont.com.pe', idusuario: '1733', idrol: '1066', nomrol: 'BIO_ROL_ID', correos_adicionales: ['id@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'CONSTANTINO IVAN POMIANO JESUS', correo: 'cpomiano@biomont.com.pe', idusuario: '283', idrol: '1065', nomrol: 'BIO_ROL_PRODUCCION', correos_adicionales: ['cpomiano@biomont.com.pe', 'mmiranda@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'BLANCA SARITA ELUGO GUEVARA', correo: 'belugo@biomont.com.pe', idusuario: '274', idrol: '1074', nomrol: 'BIO_ROL_COMERCIAL_ASISTENTE', correos_adicionales: ['belugo@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'CESAR ENRIQUE SUNCION SOSA', correo: 'csuncion@biomont.com.pe', idusuario: '285', idrol: '1069', nomrol: 'BIO_ROL_ALMACEN', correos_adicionales: ['csuncion@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'GERIL BERENIZE CASTRO HUAMAN', correo: 'gcastro@biomont.com.pe', idusuario: '1817', idrol: null, nomrol: null, correos_adicionales: ['gcastro@biomont.com.pe', 'wpinedo@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'WILMER PINEDO HUAMAN', correo: 'wpinedo@biomont.com.pe', idusuario: '1802', idrol: null, nomrol: null, correos_adicionales: ['wpinedo@biomont.com.pe', 'gcastro@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'PAOLO EPIFANIO VICHARRA FLORIAN', correo: 'pvicharra@Biomont.com.pe', idusuario: '296', idrol: '1051', nomrol: 'BIO_ROL_CONTABILIDAD_ASISTENTE', correos_adicionales: ['pvicharra@Biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'MAGNO LUCIO REVATTA ÑAÑEZ', correo: 'mrevatta@biomont.com.pe', idusuario: '319', idrol: null, nomrol: null, correos_adicionales: ['ti@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'DENIS BETTY ALAYO MERGILDO', correo: 'dalayo@biomont.com.pe', idusuario: '276', idrol: '1082', nomrol: 'BIO_ROL_ADMINISTRACION', correos_adicionales: ['adurand@Biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'LINCOLN GIAMPIERRE ZAMUDIO CASTILLO', correo: 'lzamudio@biomont.com.pe', idusuario: '24738', idrol: null, nomrol: null, correos_adicionales: ['lzamudio@biomont.com.pe', 'jalcantara@biomont.com.pe', 'rgarfias@biomont.com.pe', 'pliviac@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'JEAN FRANCO ALCANTARA RODRIGUEZ', correo: 'jalcantara@biomont.com.pe', idusuario: '27817', idrol: null, nomrol: null, correos_adicionales: ['lzamudio@biomont.com.pe', 'jalcantara@biomont.com.pe', 'rgarfias@biomont.com.pe', 'pliviac@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'ROSALIA GARFIAS DE LA CRUZ', correo: 'rgarfias@biomont.com.pe', idusuario: '1796', idrol: '1085', nomrol: 'BIO_ROL_MARKETING_ASISTENTE', correos_adicionales: ['lzamudio@biomont.com.pe', 'jalcantara@biomont.com.pe', 'rgarfias@biomont.com.pe', 'pliviac@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
+            { nomusuario: 'ALBINA ROSA YARINGAÑO PIZARRO', correo: 'ayaringano@biomont.com.pe', idusuario: '170', idrol: '1059', nomrol: 'BIO_ROL_FINANZAS_ASISTENTE', correos_adicionales: ['ayaringano@biomont.com.pe', 'avilchez@biomont.com.pe', 'kcelestino@biomont.com.pe', 'lbasualdo@biomont.com.pe'] },
         ];
 
         const ususarios_aprobadores = [
-            { nomusuario: 'ANGELO VILCHEZ MARQUEZ', correo: 'avilchez@biomont.com.pe', idusuario: '22150', idrol: '1080', nomrol:'BIO_ROL_LOGISTICA_PLANEAMIENTO' },
-            { nomusuario: 'KEVIN MARCEL CELESTINO PUCHOC', correo: 'kcelestino@biomont.com.pe', idusuario: '865', idrol: '1043', nomrol:'BIO_ROL_LOGISTICA_COMPRADOR' },
-            { nomusuario: 'LILIAN ALINA BASUALDO SOTO', correo: 'lbasualdo@biomont.com.pe', idusuario: '26526', idrol: '1114', nomrol:'BIO_ROL_LOGISTICA_SUPERVISOR' },
+            { nomusuario: 'ANGELO VILCHEZ MARQUEZ', correo: 'avilchez@biomont.com.pe', idusuario: '22150', idrol: '1080', nomrol: 'BIO_ROL_LOGISTICA_PLANEAMIENTO' },
+            { nomusuario: 'KEVIN MARCEL CELESTINO PUCHOC', correo: 'kcelestino@biomont.com.pe', idusuario: '865', idrol: '1043', nomrol: 'BIO_ROL_LOGISTICA_COMPRADOR' },
+            { nomusuario: 'LILIAN ALINA BASUALDO SOTO', correo: 'lbasualdo@biomont.com.pe', idusuario: '26526', idrol: '1114', nomrol: 'BIO_ROL_LOGISTICA_SUPERVISOR' },
         ];
 
         /**
@@ -94,6 +96,7 @@ window.addEventListener("load", (e) => {
             input_linea_articulo: document.getElementsByName('custitem3_display')[0],
 
             input_estado_aprobacion: document.getElementsByName('custitem_articulo_estado_creacion')[0],
+            input_id_creador: document.getElementsByName("custitem21")[0],
             input_nombre_revisador: document.getElementsByName('custitem_articulo_revisador')[0],
             input_nombre_aprobador: document.getElementsByName('custitem_articulo_aprobador')[0],
 
@@ -286,22 +289,22 @@ window.addEventListener("load", (e) => {
                                             },
                                             body: JSON.stringify({ "dato": dato })
                                         })
-                                        .then((response) => response.json())
-                                        .then((data) => {
+                                            .then((response) => response.json())
+                                            .then((data) => {
 
-                                            document.getElementById('id-blocker').style.display = 'none';
-                                            document.getElementById('id-popup').style.display = 'none';
+                                                document.getElementById('id-blocker').style.display = 'none';
+                                                document.getElementById('id-popup').style.display = 'none';
 
-                                            data_base.forEach(elemento => {
-                                                if (dato.linea === elemento.linea) {
-                                                    obj.input_codigo_articulo.value = obj.getNumeroCorrelativo(data.num, data.nomen);
-                                                    obj.llenar_campos(dato.linea, dato.unidad);
-                                                    obj.input_descripcion_articulo.focus();
-                                                }
+                                                data_base.forEach(elemento => {
+                                                    if (dato.linea === elemento.linea) {
+                                                        obj.input_codigo_articulo.value = obj.getNumeroCorrelativo(data.num, data.nomen);
+                                                        obj.llenar_campos(dato.linea, dato.unidad);
+                                                        obj.input_descripcion_articulo.focus();
+                                                    }
+                                                })
+
                                             })
-
-                                        })
-                                        .catch(error => console.error(error));
+                                            .catch(error => console.error(error));
                                     });
                                 });
                             }
@@ -404,25 +407,139 @@ window.addEventListener("load", (e) => {
 
                     })
                     .catch(error => console.error(error));
+
             },
-            enviar_correo: (nombre_ejecutor, email_notificacion, concepto, accion) => {
+            enviar_correo: (nombre_ejecutor, email_notificacion = [], concepto, accion) => {
+
                 obj.main_form.addEventListener("submit", (e) => {
+
+                    e.preventDefault();
+
+                    if (obj.iduser.value === '22150' || obj.iduser.value === '865' || obj.iduser.value === '26526') {
+
+                        obj.display_blocker("Enviando email...");
+
+                        let dato = {
+                            id_formulario: obj.id_formulario.value,
+                            codigo_articulo: obj.input_codigo_articulo.value,
+                            descripcion_articulo: obj.input_descripcion_articulo.value,
+                            nombre_ejecutor: nombre_ejecutor.value,
+                            email_notificacion: ['jpena@biomont.com.pe', 'fcastro@biomont.com.pe'],
+                            email_notificacion_aux: email_notificacion,     //auxiliar, solo para probar
+                            linea_articulo: obj.input_linea_articulo.value,
+                            concepto: concepto,
+                            accion: accion
+                        };
+
+                        fetch(BASE_URL + "/correlativoarticulo/sendEmailNotification", {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                            },
+                            body: JSON.stringify({ "dato": dato })
+                        })
+                            .then((response) => response.json())
+                            .then((data) => {
+
+                                if (data.est == 0) {
+
+                                    if (accion !== 'Revisado') {
+                                        obj.campos_autocompletar.inactivo.checked = false;
+                                    }
+
+                                    alert("El correo se envió correctamente");
+                                    obj.main_form.submit();
+                                    return true;
+
+                                } else {
+
+                                    alert("Hubo un error en el envío de correo");
+                                    return false;
+
+                                }
+
+                            })
+                            .catch(error => console.error(error));
+
+                    } else {
+                        let revisador = usuarios_registradores.find(usureg => usureg.idusuario == obj.input_id_creador.value);
+
+                        if (revisador) {
+
+                            if (revisador.idrevisador === document.getElementById('id-input-revision').value) {
+
+                                obj.display_blocker("Enviando email...");
+
+                                let dato = {
+                                    id_formulario: obj.id_formulario.value,
+                                    codigo_articulo: obj.input_codigo_articulo.value,
+                                    descripcion_articulo: obj.input_descripcion_articulo.value,
+                                    nombre_ejecutor: nombre_ejecutor.value,
+                                    email_notificacion: ['jpena@biomont.com.pe', 'fcastro@biomont.com.pe'],
+                                    email_notificacion_aux: email_notificacion,     //auxiliar, solo para probar
+                                    linea_articulo: obj.input_linea_articulo.value,
+                                    concepto: concepto,
+                                    accion: accion
+                                };
+
+                                fetch(BASE_URL + "/correlativoarticulo/sendEmailNotification", {
+                                    method: "POST",
+                                    headers: {
+                                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                                    },
+                                    body: JSON.stringify({ "dato": dato })
+                                })
+                                    .then((response) => response.json())
+                                    .then((data) => {
+
+                                        if (data.est == 0) {
+
+                                            if (accion !== 'Revisado') {
+                                                obj.campos_autocompletar.inactivo.checked = false;
+                                            }
+
+                                            alert("El correo se envió correctamente");
+                                            obj.main_form.submit();
+                                            return true;
+
+                                        } else {
+
+                                            alert("Hubo un error en el envío de correo");
+                                            return false;
+
+                                        }
+
+                                    })
+                                    .catch(error => console.error(error));
+
+                            } else {
+                                alert('No esta permitido de firmar el registro');
+                                return false;
+                            }
+
+                        } else {
+                            alert('No esta permitido de firmar el registro');
+                            return false;
+                        }
+
+                    }
+
+                })
+
+                /*obj.main_form.addEventListener("submit", (e) => {
                     e.preventDefault();
 
                     obj.display_blocker("Enviando email...");
 
-                    /*const element_email = document.querySelector('#custitem21_displayval a');
-                    //element.addEventListener('mouseover', function() {
-                    //  console.log('Event triggered');
+                    //const element_email = document.querySelector('#custitem21_displayval a');
+                    //const event = new MouseEvent('mouseover', {
+                    //    'view': window,
+                    //    'bubbles': true,
+                    //    'cancelable': true
                     //});
-                    const event = new MouseEvent('mouseover', {
-                        'view': window,
-                        'bubbles': true,
-                        'cancelable': true
-                    });
 
-                    setTimeout(element_email.dispatchEvent(event), 1000);
-                    setTimeout(() => {*/
+                    //setTimeout(element_email.dispatchEvent(event), 1000);
+                    //setTimeout(() => {
 
                     let dato = {
                         id_formulario: obj.id_formulario.value,
@@ -466,9 +583,9 @@ window.addEventListener("load", (e) => {
                         })
                         .catch(error => console.error(error));
 
-                    /*}, 3000);*/
+                    //}, 3000);
 
-                });
+                });*/
             },
             actualiza_correlativo: () => {
                 obj.main_form.addEventListener("submit", (e) => {
@@ -572,44 +689,56 @@ window.addEventListener("load", (e) => {
 
                     } else {
 
-                        obj.display_blocker("Actualizando correlativo...");
+                        let usuario_creador = usuarios_registradores.find(usucreador => usucreador.idusuario === obj.iduser.value);
 
-                        let dato = {
-                            nomenclatura: obj.input_codigo_articulo.value.substring(0, obj.input_codigo_articulo.value.indexOf('0')),
-                            correlativo_vista: +obj.input_codigo_articulo.value.replace(/[^0-9]+/g, "")
-                        }
+                        if (usuario_creador) {
 
-                        fetch(BASE_URL + "/correlativoarticulo/updateCorrelativoLineaArticulo", {
-                            method: "POST",
-                            headers: {
-                                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-                            },
-                            body: JSON.stringify({ "dato": dato })
-                        })
-                            .then((response) => response.json())
-                            .then((data) => {
+                            let dato = {
+                                nomenclatura: obj.input_codigo_articulo.value.substring(0, obj.input_codigo_articulo.value.indexOf('0')),
+                                correlativo_vista: +obj.input_codigo_articulo.value.replace(/[^0-9]+/g, "")
+                            }
 
-                                if (data.res) {
+                            obj.display_blocker("Actualizando correlativo...");
 
-                                    alert("Correlativo actualizado correctamente");
-
-                                    let usuario_creador = usuarios_registradores.find(usucreador => usucreador.idusuario === obj.iduser.value);
-                                    let usuario_revisador = usuarios_revisadores.find(usurev => usurev.idusuario === usuario_creador.idrevisador);
-
-                                    obj.enviar_correo_creacion(usuario_creador.nomusuario, [usuario_revisador.correo], 'Creación', 'Creado');
-
-                                    obj.main_form.submit();
-                                    return true;
-
-                                } else {
-
-                                    alert("Hubo un error en la actualizacion del correlativo");
-                                    return false;
-
-                                }
-
+                            fetch(BASE_URL + "/correlativoarticulo/updateCorrelativoLineaArticulo", {
+                                method: "POST",
+                                headers: {
+                                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                                },
+                                body: JSON.stringify({ "dato": dato })
                             })
-                            .catch(error => console.error(error));
+                                .then((response) => response.json())
+                                .then((data) => {
+
+                                    if (data.res) {
+
+                                        alert("Correlativo actualizado correctamente, se envió correo de creación");
+
+
+                                        let usuario_revisador = usuarios_revisadores.find(usurev => usurev.idusuario === usuario_creador.idrevisador);
+
+                                        obj.enviar_correo_creacion(usuario_creador.nomusuario, [usuario_revisador.correo], 'Creación', 'Creado');
+
+                                        obj.main_form.submit();
+
+                                        return true;
+
+                                    } else {
+
+                                        alert("Hubo un error en la actualizacion del correlativo");
+                                        return false;
+
+                                    }
+
+                                })
+                                .catch(error => console.error(error));
+
+                        } else {
+
+                            alert("No esta permitido para crear este registro");
+                            return false;
+
+                        }
 
                     }
 
@@ -692,55 +821,55 @@ window.addEventListener("load", (e) => {
             },
             conexion: () => {
                 fetch(BASE_URL + "/correlativoarticulo/index")
-                .then((response) => response.json())
-                .then((data) => {
+                    .then((response) => response.json())
+                    .then((data) => {
 
-                    if (data.con == 'ok') {
+                        if (data.con == 'ok') {
 
-                        obj.replicaDescripcion();
+                            obj.replicaDescripcion();
 
-                        obj.getCorrelativoLineaArticulo();
+                            obj.getCorrelativoLineaArticulo();
 
-                        obj.actualiza_correlativo();
+                            obj.actualiza_correlativo();
 
-                        obj.tipo_unidades_name.addEventListener('click', () => {
-                            obj.input_linea_articulo.value = "";
-                        });
+                            obj.tipo_unidades_name.addEventListener('click', () => {
+                                obj.input_linea_articulo.value = "";
+                            });
 
 
-                        if (obj.input_nombre_formulario) {
-                            obj.input_nombre_formulario.setAttribute('style', 'pointer-events: none;');
+                            if (obj.input_nombre_formulario) {
+                                obj.input_nombre_formulario.setAttribute('style', 'pointer-events: none;');
+                            }
+
+                            obj.input_linea_articulo.setAttribute('style', 'pointer-events: none;');
+
+                            switch (obj.subtipo.value) {
+                                case 'Sale': //Venta
+                                    obj.input_estado_aprobacion.value = 'PENDIENTE';
+                                    obj.input_estado_aprobacion.setAttribute('style', 'pointer-events: none;');
+                                    obj.input_nombre_revisador.value = '';
+                                    obj.input_nombre_revisador.setAttribute('style', 'pointer-events: none;');
+                                    obj.input_nombre_aprobador.value = '';
+                                    obj.input_nombre_aprobador.setAttribute('style', 'pointer-events: none;');
+                                    break;
+                                case 'Resale': // Reventa
+                                    obj.input_estado_aprobacion.value = 'PENDIENTE';
+                                    obj.input_estado_aprobacion.setAttribute('style', 'pointer-events: none;');
+                                    obj.input_nombre_revisador.value = '';
+                                    obj.input_nombre_revisador.setAttribute('style', 'pointer-events: none;');
+                                    obj.input_nombre_aprobador.value = '';
+                                    obj.input_nombre_aprobador.setAttribute('style', 'pointer-events: none;');
+                                    break;
+                            }
                         }
 
-                        obj.input_linea_articulo.setAttribute('style', 'pointer-events: none;');
+                    })
+                    .catch(error => {
+                        console.error(error);
 
-                        switch (obj.subtipo.value) {
-                            case 'Sale': //Venta
-                                obj.input_estado_aprobacion.value = 'PENDIENTE';
-                                obj.input_estado_aprobacion.setAttribute('style', 'pointer-events: none;');
-                                obj.input_nombre_revisador.value = '';
-                                obj.input_nombre_revisador.setAttribute('style', 'pointer-events: none;');
-                                obj.input_nombre_aprobador.value = '';
-                                obj.input_nombre_aprobador.setAttribute('style', 'pointer-events: none;');
-                                break;
-                            case 'Resale': // Reventa
-                                obj.input_estado_aprobacion.value = 'PENDIENTE';
-                                obj.input_estado_aprobacion.setAttribute('style', 'pointer-events: none;');
-                                obj.input_nombre_revisador.value = '';
-                                obj.input_nombre_revisador.setAttribute('style', 'pointer-events: none;');
-                                obj.input_nombre_aprobador.value = '';
-                                obj.input_nombre_aprobador.setAttribute('style', 'pointer-events: none;');
-                                break;
-                        }
-                    }
+                        obj.msj_conexion();
 
-                })
-                .catch(error => {
-                    console.error(error);
-
-                    obj.msj_conexion();
-
-                });
+                    });
             }
         }
 
@@ -771,7 +900,7 @@ window.addEventListener("load", (e) => {
                 case '1082': //BIO_ROL_ADMINISTRACION
                 case '1085': //BIO_ROL_MARKETING_ASISTENTE
                 case '1059': //BIO_ROL_FINANZAS_ASISTENTE
-                
+
                     switch (obj.iduser.value) {
                         case '1739':    //IVAN REYNA
                         case '301':     //EDISON VERA
@@ -789,6 +918,7 @@ window.addEventListener("load", (e) => {
                         case '27817':   //JEAN ALCANTARA
                         case '1796':    //ROSALIA GARFIAS
                         case '170':     //ALBINA YARINGAÑO
+
                             usuario_session = usuarios_revisadores.find(usurev => usurev.idusuario == obj.iduser.value);
 
                             if (obj.input_nombre_revisador.value === '') {
@@ -800,11 +930,14 @@ window.addEventListener("load", (e) => {
                                 obj.setInputAux(obj.input_nombre_revisador, 'revision', reportar_revisador.idusuario);
 
                                 if (document.getElementById('id-input-revision').value === reportar_revisador.idusuario && obj.input_nombre_aprobador.value === '') {
+
                                     obj.input_estado_aprobacion.value = 'REVISADO';
                                     obj.setBotonFirma(obj.input_nombre_revisador, 'revisar', reportar_revisador.correos_adicionales, 'Revisión', 'Revisado');
+
                                 }
                             }
                             break;
+
                     }
                     break;
 
@@ -816,6 +949,7 @@ window.addEventListener("load", (e) => {
                         case '22150':   //ANGELO VILCHEZ   
                         case '865':     //KEVIN CELESTINO  
                         case '26526':   //LILIAN BASUALDO   
+
                             usuario_session = ususarios_aprobadores.find(usuaprob => usuaprob.idusuario == obj.iduser.value);
 
                             if (obj.input_nombre_aprobador.value === '') {
