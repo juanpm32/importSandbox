@@ -791,6 +791,7 @@ window.addEventListener("load", (e) => {
                         if (data.con == 'ok') {
 
                             obj.replicaDescripcion();
+                            obj.bloque_detalle.setAttribute('style', 'pointer-events: none;');
 
                             obj.getCorrelativoLineaArticulo();
 

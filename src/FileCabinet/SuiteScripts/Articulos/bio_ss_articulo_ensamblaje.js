@@ -580,74 +580,10 @@ window.addEventListener("load", (e) => {
 						return false;
 					}
 
-
 				}
-
 
 			})
 
-			/*obj.main_form.addEventListener("submit",(e)=>{
-	
-				e.preventDefault();
-	
-				obj.display_blocker("Enviando email...");
-	
-				//const element_email = document.querySelector('#custitem21_displayval a');
-	
-				//const event = new MouseEvent('mouseover', {
-				//'view': window,
-				//'bubbles': true,
-				//'cancelable': true
-				//});
-				
-				//setTimeout(element_email.dispatchEvent(event),500);
-				//setTimeout(()=>{
-			
-				let dato = {
-				id_formulario: obj.id_formulario.value,
-							codigo_articulo: obj.input_codigo_articulo.value,
-							descripcion_articulo: obj.input_descripcion_articulo.value,
-							nombre_ejecutor: nombre_ejecutor.value,
-							email_notificacion: ['jpena@biomont.com.pe', 'fcastro@biomont.com.pe'],
-							email_notificacion_aux: email_notificacion,     //auxiliar, solo para probar
-							linea_articulo: obj.input_linea_articulo.value,
-							concepto: concepto,
-							accion: accion
-				};
-			
-				fetch(BASE_URL+"/correlativoarticulo/sendEmailNotification",{
-				method: "POST",
-				headers: {
-				'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
-				},
-				body: JSON.stringify({"dato":dato})
-				})
-				.then((response) => response.json())
-				.then((data) => {
-	
-				if (data.est == 0) {
-	
-					if (accion !== 'Revisado') {
-					obj.campos_autocompletar.inactivo.checked = false;
-					}
-	
-					alert("El correo se envió correctamente");
-					obj.main_form.submit();
-					return true;
-	
-				} else {
-	
-					alert("Hubo un error en el envío de correo");
-					return false;
-	
-				}
-	
-				})
-				.catch(error => console.error(error));
-			
-				//},3000);
-				
-			});*/
 		},
 		actualiza_correlativo: () => {
 			obj.main_form.addEventListener("submit", (e) => {
@@ -998,6 +934,7 @@ window.addEventListener("load", (e) => {
 					if (data.con == 'ok') {
 
 						obj.replicaDescripcion();
+						obj.bloque_detalle.setAttribute('style', 'pointer-events: none;');
 
 						obj.getCorrelativoLineaArticulo();
 
@@ -1017,12 +954,6 @@ window.addEventListener("load", (e) => {
 
 						obj.asignarEstadoAprobacion();
 
-						/*obj.input_estado_aprobacion.value = 'PENDIENTE';
-						obj.input_estado_aprobacion.setAttribute('style', 'pointer-events: none;');
-						obj.input_nombre_revisador.value = '';
-						obj.input_nombre_revisador.setAttribute('style', 'pointer-events: none;');
-						obj.input_nombre_aprobador.value = '';
-						obj.input_nombre_aprobador.setAttribute('style', 'pointer-events: none;');*/
 					}
 
 				})
@@ -1045,8 +976,8 @@ window.addEventListener("load", (e) => {
 	} else {
 
 		console.log("Editar");
-		console.log(obj.idrol.value);
-		console.log(obj.iduser.value);
+
+		obj.replicaDescripcion();
 
 		let usuario_session = '';
 
