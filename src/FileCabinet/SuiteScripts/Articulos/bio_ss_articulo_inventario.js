@@ -6,7 +6,7 @@ window.addEventListener("load", (e) => {
 
 	//document.getElementsByName("custitem21")[0].value = '298';
 	document.getElementsByName("custitem21")[0].setAttribute('type', '');
-	document.getElementsByName("nluser")[0].value = '22150';
+	document.getElementsByName("nluser")[0].value = '24738';
 	//document.getElementsByName("nlrole")[0].value = '1080';
 
 	const usuarios_registradores = [
@@ -27,7 +27,7 @@ window.addEventListener("load", (e) => {
 		{ area: 'ADMINISTRACION', nomusuario: 'ALEXANDRA MEYLIN DURAND BALDEON', correo: 'adurand@biomont.com.pe', idusuario: '22194', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '276', revision: true },
 		{ area: 'COMERCIAL', nomusuario: 'BLANCA SARITA ELUGO GUEVARA', correo: 'belugo@biomont.com.pe', idusuario: '274', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '274', revision: false },
 		{ area: 'TI', nomusuario: 'MAGNO LUCIO REVATTA ÑAÑEZ', correo: 'mrevatta@biomont.com.pe', idusuario: '319', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '319', revision: false },
-		{ area: 'CONTABILIDAD', nomusuario: 'PAOLO EPIFANIO VICHARRA FLORIAN', correo: 'pvicharra@Biomont.com.pe', idusuario: '296', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '296', revision: false },
+		{ area: 'TI', nomusuario: 'OMAR CASTILLEJO MEJÍA', correo: 'ocastillejo@biomont.com.pe', idusuario: '23628', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '319', revision: false },
 		{ area: 'RRHH', nomusuario: 'WILMER PINEDO HUAMAN', correo: 'wpinedo@biomont.com.pe', idusuario: '1802', idrol: null, nomrol: null, idrevisador: '1802', revision: false },
 		{ area: 'RRHH', nomusuario: 'GERIL BERENIZE CASTRO HUAMAN', correo: 'gcastro@biomont.com.pe', idusuario: '1817', idrol: null, nomrol: null, idrevisador: '1817', revision: false },
 		{ area: 'ALMACEN', nomusuario: 'CESAR ENRIQUE SUNCION SOSA', correo: 'csuncion@biomont.com.pe', idusuario: '285', idrol: '1120', nomrol: 'BIO_ROL_CREACION_ARTICULO', idrevisador: '285', revision: false },

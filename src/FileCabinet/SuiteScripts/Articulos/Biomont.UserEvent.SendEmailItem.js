@@ -43,7 +43,7 @@ define(['N'],
                 var valorLinea = referenciaLinea.getValue({ fieldId: campoLinea });
 
                 var copia_usuario = currentUser.id;
-                copia_usuario = 22150;
+                copia_usuario = 24738;
 
                 // Evalua el id del usuario actual para llenar el array destinatarios
                 //switch(currentUser.id){
